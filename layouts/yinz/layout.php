@@ -18,15 +18,13 @@ if (!defined('INITIALIZED'))
 
         <!-- CSS -->
         <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/css/main.css<?php echo $css_version; ?>" type="text/css" />
+        <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/css/iziModal.css<?php echo $css_version; ?>" type="text/css" />
         <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/css/fontello.css<?php echo $css_version; ?>" type="text/css" />
         <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/fonts/cambria.ttf" type="text/css" />
         <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/css/lightbox.min.css<?php echo $css_version; ?>" type="text/css" />
 
         <!-- JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="<?php echo $layout_name; ?>/assets/js/lightbox-plus-jquery.min.js"></script>
-        <script src="<?php echo $layout_name; ?>/assets/js/jquery-ui.min.js<?php echo $css_version; ?>"></script>
-        <script src="<?php echo $layout_name; ?>/assets/js/jquery.mask.js<?php echo $css_version; ?>"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>   
         <script src="<?php echo $layout_name; ?>/assets/js/ajaxcip.js<?php echo $css_version; ?>"></script>
         <script src="<?php echo $layout_name; ?>/assets/js/generic.js<?php echo $css_version;?>"></script>
         <script src="<?php echo $layout_name; ?>/assets/js/initialize.js<?php echo $css_version;?>"></script>
@@ -36,10 +34,12 @@ if (!defined('INITIALIZED'))
         <?php if ($subtopic == 'adminpanel') { ?>
             <script src="<?php echo $layout_name; ?>/assets/js/ajaxmonteiro.js<?php echo $css_version; ?>"></script>
         <?php } ?>
-        <script src="<?php echo $layout_name; ?>/assets/js/iziModal.min.js<?php echo $css_version; ?>"></script>
         <!--Tiny Editor 
         <script type="text/javascript" src="./vendor/tinymce/tinymce/tinymce.min.js"></script>-->
         <script src="<?php echo $layout_name; ?>/assets/js/iziToast.min.js<?php echo $css_version; ?>"></script>
+        <script async src="<?php echo $layout_name; ?>/assets/js/iziModal.js<?php echo $css_version; ?>"></script>
+
+
 
         <?php
            if ($_REQUEST['subtopic'] == "createaccount") echo '<script src="' . $layout_name . '/assets/js/create_character.js' . $css_version . '"></script>';
@@ -265,24 +265,21 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                                     <img src="<?php echo $layout_name; ?>/assets/img/icons/account-icon.png">
                                     <p class="login-up-text">Login</p>
                                 </div>
+                                <script>
+                                function onSubmit(token) {
+                                    document.getElementById("loginform").submit();
+                                 }
+                                </script>
                                 <form action="?subtopic=accountmanagement" id="loginform" method="post">
 
                                   <input type="hidden" name="login" value="ok">
                                     <label for="username">Account:</label>
-                                    <input type="password" name="account_login" value="' . $_POST["account_login"] . '" size="20" maxlength="30" >
+                                    <input type="password" name="account_login" value="<?=$_POST["account_login"];?>" size="20" maxlength="30" >
 
                                     <label for="password">Password:</label>
-                                    <input type="password" name="password_login" value="' . $_POST["password_login"] . '" size="20" maxlength="29" >
-                                    <button class="submit">Enter</button>
-                                    <button
-																					    style="background-color: transparent; border: 0 solid;"
-                                                                                        class="g-recaptcha ButtonText"
-                                                                                        data-badge="bottomleft"
-                                                                                        data-size="invisible"
-                                                                                        data-sitekey="<?PHP echo Website::getWebsiteConfig()->getValue('gRecaptchaSiteKey') ?>"
-                                                                                        data-callback="onSubmit"></button>
-                                </form>
+                                    <input type="password" name="password_login" value="<?=$_POST["password_login"];?>" size="20" maxlength="29" >
 
+                                    <button class="g-recaptcha" data-sitekey="<?=Website::getWebsiteConfig()->getValue('gRecaptchaSiteKey');?>" data-callback='onSubmit'>Submit</button>
                             </div>
 
                             <?php
@@ -410,6 +407,9 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                 </div>
             </footer>
         </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script><script src="<?php echo $layout_name; ?>/assets/js/lightbox-plus-jquery.min.js"></script>
+    
     </body>
 
     </html>

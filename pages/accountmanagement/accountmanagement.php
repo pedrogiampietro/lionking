@@ -93,23 +93,19 @@ $main_content .= '
 																					<input id="submit_button" type="submit" value="Get Coins" class="btn btn-primary btn-block">																						
 																					</div>
 																				</form></br>';
-if ($group_id_of_acc_logged >= $config['site']['access_admin_panel']) {
-    $main_content .= '
+
+																				$main_content .= '
 																				<div style="font-size:1px;height:4px;"></div>
-																				<form action="?subtopic=adminpanel" method="post" style="padding:0px;margin:0px;">
+																				<form action="?subtopic=accountmanagement&action=logout" method="post" style="padding:0px;margin:0px;">
 																				<input id="submit_button" type="submit" value="Logout" class="btn btn-primary btn-block">																					</div>
 																				</form>
 																				</br>
 																				
 																				';
+if ($group_id_of_acc_logged >= $config['site']['access_admin_panel']) {
+
 }
 //if($config['server']['freePremium'] == "no" || $account_logged->getPremDays() > 0)
-$main_content .= '
-																				<div style="font-size:1px;height:4px;"></div>
-																				<form action="?subtopic=adminpanel" method="post" style="padding:0px;margin:0px;">
-																				<input id="submit_button" type="submit" value="Logout" class="btn btn-primary btn-block">																					</div>
-																				</form>
-																				</br>';
 $main_content .= '
 																			</td>
 																		</tr>
@@ -374,50 +370,41 @@ if ($group_id_of_acc_logged >= $config['site']['access_admin_panel']) {
 						</div><br/>';
     }
 }
+
 //CHARACTERS
 $main_content .= '
 				<div class="RowsWithOverEffect">
-					<div class="TableContainer">
-						<div class="CaptionContainer">
-							<div class="CaptionInnerContainer">
-								<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>
-								<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>
-								<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>
-								<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>
-								<div class="Text">Characters</div>
-								<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>
-								<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>
-								<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>
-								<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>
-							</div>
-						</div>
-						<table class="Table3" cellpadding="0" cellspacing="0">
-							<tbody>
-								<tr>
-									<td>
-										<div class="InnerTableContainer">
-											<table style="width:100%;">
-												<tbody>
-													<tr>
-														<td>
-															<div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);">
-																<div class="TableContentContainer">
-																	<table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
-																		<tbody>
-																						
-																			<div class="characters-list"><a href="/search-characters/Yinzera" class="character" style="background-image:url(/outfit/230,78,69,58,76)">
-																			<div class="character-hp" data-char="Yinzera"></div>
-																		</a><a href="javascript:" onclick="newChar()" class="character">
-																				<div class="character-new">+ <div class="char-text">Create new character</div></div>
-																			</a>
-																	</div>
-																			
-																			';
+					<div class="Text">Characters</div>
+					<div class="characters-list">';
+
+					$main_content .= '
+					
+			
+					
+					<!-- Modal structure -->
+					<div id="modal"> <!-- data-iziModal-fullscreen="true"  data-iziModal-title="Welcome"  data-iziModal-subtitle="Subtitle"  data-iziModal-icon="icon-home" -->
+						<!-- Modal content -->
+					</div>
+					 
+					<!-- Trigger to open Modal -->
+					<a href="https://github.com/marcelodolza/iziModal" class="trigger">Modal</a>
+					
+					';
+
+
 
 $account_players = $account_logged->getPlayersList();
 //show list of players on account
 $var = 0;
+
+$main_content .= ' 
+
+				';
+
+
 foreach ($account_players as $account_player) {
+
+	
     $player_number_counter++;
     
     if ($var == 0) {
@@ -433,66 +420,24 @@ foreach ($account_players as $account_player) {
         $displayBold = 'normal';
         $displayFont = '10';
     }
-    
-    $main_content .= '
-																			<tr id="CharacterRow_' . $player_number_counter . '"
-																				onmouseover="InRowWithOverEffect(&#39;CharacterRow_' . $player_number_counter . '&#39;,';
-    
-    if (is_int($player_number_counter / 2))
-        $main_content .= '&#39;#e7d1af&#39;';
-    else
-        $main_content .= '&#39;#ffedd1&#39;';
-    
-    
-    $main_content .= '
-																				);"
-																				onmouseout="OutRowWithOverEffect(&#39;CharacterRow_' . $player_number_counter . '&#39;,';
-    
-    if (is_int($player_number_counter / 2))
-        $main_content .= '&#39;#d5c0a1&#39;';
-    else
-        $main_content .= '&#39;#f1e0c6&#39;';
-    
-    $main_content .= '
-																				);"
-																				onclick="FocusCharacter(' . $player_number_counter . ', &#39;' . urlencode($account_player->getName()) . '&#39;, ' . $config['site']['max_players_per_account'] . ');"
-																				class="Odd" style="font-weight: ' . $displayBold . ';';
-    
-    if (is_int($player_number_counter / 2))
-        $main_content .= 'background-color: #d5c0a1;">';
-    else
-        $main_content .= 'background-color: #f1e0c6;">';
-    
-    
-    $main_content .= '
-																				<td style="width:40px;text-align:center;padding:2px;">
-																					<span id="CharacterNumberOf_' . $player_number_counter . '" style="display: ' . $displayNum . ';">' . $player_number_counter . '.</span>
-																					<span id="PlayButtonOf_' . $player_number_counter . '" style="display: ' . $display . ';">
-																						<!--<span name="FlashClientPlayButton" id="FlashClientPlayButton" playlink="?subtopic=play&name=' . htmlspecialchars($account_player->getName()) . '" ' . $preview . '> -->';
-    
-    if ($account_player->isDeleted()) {
-        $main_content .= '<img style="border:0px;" src="' . $layout_name . '/images/account/play-not-button.gif">';
-    } else if (!$config['site']['flash_client_enabled']) {
-        $main_content .= '<img style="border:0px;" alt="Flash client disabled" src="' . $layout_name . '/images/account/play-button-disabled.gif">';
-    } else {
-        $main_content .= '
-																								<img style="border:0px;" onmouseover="InMiniButton(this, &#39;&#39;);" onmouseout="OutMiniButton(this, &#39;&#39;);" src="' . $layout_name . '/images/account/play-button.gif">';
-    }
-    
-    $main_content .= '
-																						<!-- </span> -->
-																					</span>
-																				</td>
-																				<td id="CharacterCell2_' . $player_number_counter . '">
-																					<span style="white-space:nowrap;vertical-align:middle;">
-																						<span id="CharacterNameOf_' . $player_number_counter . '" style="font-size: ' . $displayFont . 'pt;">' . htmlspecialchars($account_player->getName()) . '</span><br>
-																						<span id="CharacterNameOf_' . $player_number_counter . '"><small>' . htmlspecialchars(Website::getVocationName($account_player->getVocation())) . ' - Level ' . $account_player->getLevel() . '</small></span>
-																					</span>
-																				</td>
-																				<td id="CharacterCell2_' . $player_number_counter . '">
-																					<span style="white-space:nowrap;">' . htmlspecialchars($config['server']['serverName']) . '</span>
-																				</td>
-																				<td id="CharacterCell3_' . $player_number_counter . '">';
+	
+	$plus_char = '<a href="javascript:" onclick="newChar()" class="character">
+					<div class="character-new">+</div>
+				</a>';
+							
+		$main_content .= '
+			<a href="/search-characters/Yinzera" class="character">
+				<div class="character-hp" data-char="' . htmlspecialchars($account_player->getName()) . '"></div>
+				<div class="outfit-style-character">  '.$account_player->makeOutfitUrl().'</div>
+
+			</a>';
+
+			if(count($account_players) < 4 ){
+				for($i = count($account_players); $i<4; $i++){
+					$main_content .= $plus_char;					
+				}
+			}
+
     if ($account_player->isDeleted())
         $main_content .= 'deleted';
     else {
@@ -502,71 +447,30 @@ foreach ($account_players as $account_player) {
             $main_content .= '<font class="green"><b>online</b></font>';
         elseif ($account_player->isHidden())
             $main_content .= 'hidden';
-    }
-    $main_content .= '
-																				</td>
-																				<td id="CharacterCell4_' . $player_number_counter . '" style="text-align:center;">
-																					<span id="CharacterOptionsOf_' . $player_number_counter . '" style="display: ' . $display . ';">
-																						<span style="font-weight:normal;">[<a href="?subtopic=accountmanagement&action=changecharacterinformation&name=' . urlencode($account_player->getName()) . '">Edit</a>]</span>';
+	}
+	
+   /* 
+   $main_content .= '
+						
+						<td id="CharacterCell4_' . $player_number_counter . '" style="text-align:center;">
+						<span id="CharacterOptionsOf_' . $player_number_counter . '" style="display: ' . $display . ';">
+						<span style="font-weight:normal;">[<a href="?subtopic=accountmanagement&action=changecharacterinformation&name=' . urlencode($account_player->getName()) . '">Edit</a>]</span>';
+						
     if ($account_player->isDeleted()) {
         $main_content .= '<br><span style="font-weight:normal;">[<a href="?subtopic=accountmanagement&action=undeletecharacter&name=' . urlencode($account_player->getName()) . '">Undelete</a>]</span>';
     } else {
         $main_content .= '<br><span style="font-weight:normal;">[<a href="?subtopic=accountmanagement&action=deletecharacter&name=' . urlencode($account_player->getName()) . '">Delete</a>]</span>';
     }
-    
-    $main_content .= '
-																					</span>
-																				</td>
-																			</tr>';
-    $var++;
+
+	$var++;
+	*/
+
 }
-$main_content .= '
-																		</tbody>
-																	</table>
-																</div>
-															</div>
-															<div class="TableShadowContainer">
-																<div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);">
-																	<div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);"></div>
-																	<div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif);"></div>
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<table class="InnerTableButtonRow" cellpadding="0" cellspacing="0">
-																<tbody>
-																	<tr>
-																		<td></td>
-																		<td align="right" style="padding-right:7px;width:100%;">
-																			<form action="?subtopic=accountmanagement&action=createcharacter" method="post" style="padding:0px;margin:0px;">
-																				<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)">
-																					<div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);"><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);"></div>
-																						<input class="ButtonText" type="image" name="Create Character" alt="Create Character" src="' . $layout_name . '/images/global/buttons/_sbutton_createcharacter.gif">
-																					</div>
-																				</div>
-																			</form>
-																		</td>
-																	</tr>
-																</tbody>
-															</table>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+
+$main_content .= '</div>
 					</div>
-				</div>
 				<br>';
-$main_content .= '
-				<script>
-					EnablePlayButton();
-				</script>';
+
 //MIGRATION TOOL ;D
 $main_content .= '
 					<div class="SmallBox">

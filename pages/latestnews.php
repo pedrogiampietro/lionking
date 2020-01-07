@@ -189,7 +189,7 @@ function showPost($topic, $text, $smile)
  <div class="slider fade" style="display: block;">
      <a href="sub.php?page=about">
      <img src="layout/img/slides/04.png" style="width: 100%">
-         <div class="text">Welcome to Tekania</div>
+         <div class="text">Welcome to LionKing</div>
      </a>	
  </div>
  <div class="slider fade" style="display: none;">
