@@ -53,7 +53,6 @@ $main_content .= '
 										<tbody>
 											<tr>
 												<td>
-													
 														<div class="TableContentContainer">
 															<table class="TableContent" width="100%">
 															
@@ -82,7 +81,7 @@ if ($config['server']['freePremium'] == "yes") {
     $resDate = time() + $vipDays;
     $main_content .= '
 																			<small><br>Your premium time expires at <font style="text-transform:capitalize;">' . strftime('%b %d %Y, %H:%M:%S', $resDate) . '</font></small>';
-    $main_content .= '
+    $main_content .= '												
 																		</td>';
 }
 $main_content .= '
@@ -101,12 +100,13 @@ $main_content .= '
 																				</form>
 																				</br>
 																				
+																				
 																				';
 if ($group_id_of_acc_logged >= $config['site']['access_admin_panel']) {
 
 }
 //if($config['server']['freePremium'] == "no" || $account_logged->getPremDays() > 0)
-$main_content .= '
+$main_content .= ' 																	
 																			</td>
 																		</tr>
 																	</tbody>
@@ -126,10 +126,87 @@ $main_content .= '
 								</div>
 							</td>
 						</tr>
+						
 					</tbody>
 				</table>
-			</div>
-			<br>';
+
+				<!-- Começando Account Informations -->
+				<table class="TableContent" width="100%" >
+														<tr style="background-color:#4e3623;" >
+															<td class="LabelV" >Account Name:</td>
+															<td style="width:90%;" >
+																<div style="position:relative;width:100%;" >
+																	<span id="DisplayAccountID" >' . $account_logged->getName() . '</span>
+															</td>
+														</tr>
+														<tr style="background-color:#291b1c;" >
+															<td class="LabelV" >Email Address:</td>
+															<td style="width:90%;" >
+																<div style="position:relative;width:100%;" >
+																	<span id="DisplayEMail" >' . $account_logged->getEmail() . '</span>
+																</div>
+															</td>
+														</tr>
+														<tr style="background-color:#4e3623;" >
+															<td class="LabelV" >Created:</td>
+															<td>' . date("M d Y, G:i:s", $account_logged->getCreateDate()) . '</td>
+														</td>';
+$getLastLogin = $SQL->query("SELECT `lastlogin` FROM `players` WHERE `account_id` = '" . $account_logged->getID() . "' ORDER BY `lastlogin` DESC LIMIT 1")->fetch();
+$main_content .= '
+														<tr style="background-color:#291b1c;" >
+															<td class="LabelV" >Last Login:</td>
+															<td>' . (($getLastLogin['lastlogin'] > 0) ? date("M d Y, G:i:s", $getLastLogin['lastlogin']) : 'You never logged in the game.') . '</td>
+														</tr>';
+$main_content .= '
+														
+														<tr style="background-color:#291b1c;" >
+															<td class="LabelV" >Tibia Coins:</td>
+															<td>' . $account_logged->getPremiumPoints() . ' tibia coins<br>';
+$accname = $account_logged->getName();
+//INSERT INTO `pagseguro_transactions`(`transaction_code`, `name`, `payment_method`, `status`, `item_count`, `data`, `payment_amount`)
+$sql_points = "SELECT * FROM `pagseguro_transactions` WHERE `name` = '$accname' AND `status` = 'PAID' ORDER BY `data` DESC LIMIT 1";
+$last_points_bought = $SQL->query($sql_points)->fetch();
+if ($last_points_bought) {
+    $getServiceInfo = $SQL->query("SELECT `count` FROM `z_shop_offer` WHERE `id` = '" . $last_points_bought['service_id'] . "'")->fetch();
+    $main_content .= '
+															<small>(Your last donation was on ' . date("M d Y", strtotime($last_points_bought['data'])) . '. You donated to get ' . $last_points_bought['item_count'] . ' Tibia Coins.)</small>';
+} else
+    $main_content .= '
+																<small>(You have not donated to get tibia coins yet. <a href="?subtopic=accountmanagement&action=donate" title="Buy now!">Buy now!</a>)</small>';
+$main_content .= '
+															</td>
+														</tr>';
+$accountTitle = ''; // none
+foreach ($loyalty_title as $loypoints => $loytitle) {
+    
+    if ($account_logged->getLoyalty() >= $loypoints) {
+        # player rank
+        $accountTitle = $loytitle;
+    } else {
+        // first rank after geting highest title
+        $nextTitle = $loytitle;
+        $nextPoints = $loypoints;
+        break;
+    }
+}
+if ($accountTitle != '')
+    $loyaltyTitle = $accountTitle . ' of ' . $config['server']['serverName'] . (($nextPoints == 0) ? ' (You got the most highest title in the ' . $config['server']['serverName'] . '.)' : ' (Promotion to: ' . $nextTitle . ' of ' . $config['server']['serverName'] . ' at ' . $nextPoints . ' Loyalty Points)');
+else
+    $loyaltyTitle = 'No title (Promotion to: Scout of ' . $config['server']['serverName'] . ' at 50 Loyalty Points)';
+
+$main_content .= '
+														<tr style="background-color:#4e3623;">
+															<td class="LabelV">Loyalty Points</td>
+															<td>' . $account_logged->getLoyalty() . '</td>
+														</tr>
+														<tr style="background-color:#291b1c;" >
+															<td class="LabelV">Loyalty Title</td>
+															<td>' . $loyaltyTitle . '</td>
+														</tr>';
+$main_content .= '
+													</table>
+												</div>
+									</br></br>';
 
 
 $main_content .= '
@@ -164,7 +241,7 @@ $main_content .= '
 													<div class="TableContentContainer">
 														<table class="TableContent" width="100%">
 															<tbody>
-															<!-- <tr style="background-color:#D4C0A1;"> -->
+															<!-- <tr style="background-color:#4e3623;"> -->
 															<tr>
 																	<td class="LabelV">Ticket</td>
 																	<td class="LabelV">Player</td>
@@ -202,7 +279,7 @@ if ($tickets) {
 
 
 $main_content .= '
-															<!-- <tr bgcolor="#D4C0A1"> -->
+															<!-- <tr bgcolor="#4e3623"> -->
 															<tr>
                                                                 <td align="left" colspan="5"><small>To see all your tickets click on <i>Show all</i></small></td>
                                                                 <td><a href="?subtopic=accountmanagement&action=showtickets"><small>Show All</small></a></td>
@@ -246,6 +323,22 @@ $main_content .= '
 				<br/>
 				<a style="position: absolute; bottom: -5px; right: 0px;" href="?subtopic=downloadclient" >Download</a></div>
 				<span style="position: relative; top: 18px;" >Click <a href="?subtopic=downloadclient" >here</a> to download the latest Tibia client!</span>
+				</br>
+				<div class="community-box-text">
+				</br>
+                <div class="community-box-text-footer">
+                     Client Version: 1.0
+                </div>
+                <div class="community-box-text-footer">
+                     Date: 07/01/2020
+                </div>
+                <div class="community-box-text-footer">
+                     Supported platform: <b>Windows</b>
+                </div>
+                <div class="community-box-text-footer" style="margin-top: 10px;">
+                     By downloading the client you accept the LionKing <b>rules</b>.<br><br>
+                </div>
+            </div>
 				</div></td></tr>    </table>  </div></div><div class="TableShadowContainer" >
 				<div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);" >
 				<div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);" >
@@ -367,29 +460,26 @@ if ($group_id_of_acc_logged >= $config['site']['access_admin_panel']) {
 								<div class="BoxFrameEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></div>
 								<div class="BoxFrameEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></div>
 							</div>
-						</div><br/>';
+						</div><br/><br/>';
     }
 }
 
 //CHARACTERS
 $main_content .= '
 				<div class="RowsWithOverEffect">
-					<div class="Text">Characters</div>
+				<div class="premium-border">
+					<p>Characters</p>
+				</div>
 					<div class="characters-list">';
 
 					$main_content .= '
-					
-			
-					
-					<!-- Modal structure -->
-					<div id="modal"> <!-- data-iziModal-fullscreen="true"  data-iziModal-title="Welcome"  data-iziModal-subtitle="Subtitle"  data-iziModal-icon="icon-home" -->
-						<!-- Modal content -->
-					</div>
-					 
-					<!-- Trigger to open Modal -->
-					<a href="https://github.com/marcelodolza/iziModal" class="trigger">Modal</a>
-					
-					';
+									
+					<!-- Modal HTML embedded directly into document -->
+					<div id="ex1" class="modal">';
+					  
+					require_once 'createcharacter.php';
+
+					$main_content .='</div>';
 
 
 
@@ -421,7 +511,7 @@ foreach ($account_players as $account_player) {
         $displayFont = '10';
     }
 	
-	$plus_char = '<a href="javascript:" onclick="newChar()" class="character">
+	$plus_char = '<a href="#ex1" rel="modal:open" class="character">
 					<div class="character-new">+</div>
 				</a>';
 							

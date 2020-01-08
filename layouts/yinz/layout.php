@@ -24,6 +24,12 @@ if (!defined('INITIALIZED'))
         <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/css/lightbox.min.css<?php echo $css_version; ?>" type="text/css" />
 
         <!-- JS -->
+        <!-- Remember to include jQuery :) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+        <!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>   
         <script src="<?php echo $layout_name; ?>/assets/js/ajaxcip.js<?php echo $css_version; ?>"></script>
         <script src="<?php echo $layout_name; ?>/assets/js/generic.js<?php echo $css_version;?>"></script>

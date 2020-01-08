@@ -514,3 +514,14 @@ function PreloadScreenshots(a_NumberOfScreenshots) {
         g_Screenshots[i].src = JS_DIR_IMAGES + 'abouttibia/tibia_screenshot_' + i + '.png'
     }
 }
+
+// modal
+
+$('#modalExemplo').on('shown.bs.modal', function () {
+    $('#meuInput').trigger('focus')
+  })
+
+  $("#fade").modal({
+    fadeDuration: 1000,
+    fadeDelay: 1.75 // Will fade in 750ms after the overlay finishes.
+  });

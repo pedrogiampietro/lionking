@@ -57,7 +57,7 @@ $newchar_vocation = $_POST['newcharvocation'];
 $newchar_town = $_POST['newchartown'];
 if ($_POST['savecharacter'] != 1) {
     $main_content .= '
-    <div class="community-up-section">
+    <div class="community-up-section-createcharacter">
         <div class="community-up-text">
             Create Character
         </div>
