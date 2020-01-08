@@ -226,7 +226,7 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                                     </div>
                                     </a>
 
-                                    <a href="#">
+                                    <a href="?subtopic=accountmanagement&action=changepassword">
                                     <div class="game-register">
                                         <div class="game-register-image">
                                             <img src="<?php echo $layout_name; ?>/assets/img/icons/changepassword.png">
@@ -237,7 +237,7 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                                     </div>
                                     </a>
 
-                                    <a href="#">
+                                    <!--<a href="#">
                                     <div class="game-register">
                                         <div class="game-register-image">
                                             <img src="<?php echo $layout_name; ?>/assets/img/icons/settings.png">
@@ -246,7 +246,7 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                                             Settings
                                         </div>
                                     </div>
-                                    </a>
+                                    </a> -->
 
                                     <a href="?subtopic=accountmanagement&action=logout">
                                     <div class="game-register" style="margin-bottom:12px;">

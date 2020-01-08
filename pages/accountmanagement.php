@@ -100,19 +100,14 @@ if (!$logged) {
 			<form id="loginform" action="?subtopic=accountmanagement" method="post" style="margin: 0px; padding: 0px;">
 				<div class="TableContainer" >
 					<table class="Table4" cellpadding="0" cellspacing="0" >
-						<div class="CaptionContainer" >
-							<div class="CaptionInnerContainer" >
-								<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-								<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-								<div class="Text" >Account Login</div>
-								<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-								<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-								<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							</div>
+
+					<div class="community-up-section">
+						<div class="community-up-text">
+							Account Login
 						</div>
+					</div>
+					</br>
+
 						<tr>
 							<td>
 								<div class="InnerTableContainer" >
@@ -124,7 +119,7 @@ if (!$logged) {
 												</div>
 												<div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);" >
 													<div class="TableContentContainer" >
-														<table class="TableContent" width="100%"  style="border:1px solid #faf0d7;" >
+														<table class="TableContent" width="100%">
 															<tr>
 																<td>
 																	<table style="float: left; width: 370px;" cellpadding="0" cellspacing="0" >
@@ -163,7 +158,6 @@ if (!$logged) {
 																	</table>
 																	<div style="float: right; font-size: 1px;" >
 																		<input type="hidden" name="page" value="overview" >
-																			<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
 																					<button
 																					    style="background-color: transparent; border: 0 solid;"
                                                                                         class="g-recaptcha ButtonText"
@@ -171,19 +165,13 @@ if (!$logged) {
                                                                                         data-size="invisible"
                                                                                         data-sitekey="' . Website::getWebsiteConfig()->getValue('gRecaptchaSiteKey') . '"
                                                                                         data-callback="onSubmit">
-                                                                                        <input class="ButtonText" type="image" name="Login" alt="Login" src="' . $layout_name . '/images/global/buttons/_sbutton_login.gif" >
-                                                                                    </button>
-																					<!--<div class="g-recaptcha" data-sitekey="' . Website::getWebsiteConfig()->getValue('gRecaptchaSiteKey') . '" data-callback="onSubmit"></div>-->
-																					<!--<input class="g-recaptcha ButtonText" data-sitekey="' . Website::getWebsiteConfig()->getValue('gRecaptchaSiteKey') . '" data-callback="onSubmit"  type="image" name="Login" alt="Login" src="' . $layout_name . '/images/global/buttons/_sbutton_login.gif" >-->
-																				</div>
-																			</div>
+																						<input id="submit_button" name="Login" type="submit" value="Submit" class="btn btn-primary btn-block">                                                                                    </button>
+																	
 																		</form>
 																		<div style="width: 2px; height: 2px;" ></div>
+																		
 																		<form action="?subtopic=lostaccount" method="post" style="padding:0px;margin:0px;" >
-																			<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-																					<input class="ButtonText" type="image" name="Account lost?" alt="Account lost?" src="' . $layout_name . '/images/global/buttons/_sbutton_accountlost.gif" >
-																				</div>
-																			</div>
+																			<input id="submit_button" name="Login" type="submit" value="Lost Account?" class="btn btn-primary btn-block">                                                                                    </button>
 																		</form>
 																	</div>
 																</td>
@@ -198,36 +186,14 @@ if (!$logged) {
 													</div>
 												</div>
 												<tr>
-									<td>
+										<td>
 										<div class="TableShadowContainerRightTop">
 											<div class="TableShadowRightTop" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rt.gif)"></div>
 										</div>
 										<div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif)">
-										<div class="TableContentContainer" >
-										<table class="TableContent" width="100%"  style="border:1px solid #faf0d7;" >
-										<tr>
-										<td>
-										<div style="float: right; width: 135px;" >
-										<form action="#" method="post" style="padding:0px;margin:0px;" >
-										<input type="hidden" name="page" value="useauthenticator" >
-										<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-										<input class="ButtonText" type="image" name="Use Authenticator" alt="Use Authenticator" src="' . $layout_name . '/images/global/buttons/_sbutton_useauthenticator.gif" >
-										</div>
-										</div>
-										</form>
-										</div>
-										If your Tibia Account is already connected to an authenticator, click on "Use Authenticator". A field will be displayed which allows you to provide your authenticator token along with your account data upon login. Otherwise, you will be asked for your authenticator token in the next step.<p>An authenticator is a security feature which helps to prevent any unauthorised access to your Tibia account! You can connect your account to an authenticator via your account management page.</p></td></tr>
-												</table>
+										<div class="TableContentContainer" >	
 											</div>
 										</div>
-										<div class="TableShadowContainer">
-											<div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif)">
-												<div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif)"></div>
-												<div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif)"></div>
-											</div>
-										</div>
-											</td>
-										</tr>
 									</table>
 								</div>
 							</table>
@@ -264,7 +230,7 @@ if (!$logged) {
 												</div>
 												<div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);" >
 													<div class="TableContentContainer" >
-														<table class="TableContent" width="100%"  style="border:1px solid #faf0d7;" >
+														<table class="TableContent" width="100%">
 															<tr>
 																<td >
 																	<div style="float: right; margin-top: 20px;" >

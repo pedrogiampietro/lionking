@@ -66,7 +66,15 @@ if (!isset($_REQUEST['passwordchanged']) && $_REQUEST['passwordchanged'] != "don
             header("Location: ?subtopic=accountmanagement&action=passowordchanged");
         }
     }
-    $main_content .= 'Please enter your current password and a new password. Please verify your new password by entering it twice.<br/><br/>';
+	$main_content .= '
+	
+	<div class="community-up-section">
+	<div class="community-up-text">
+		Change Password
+	</div>
+</div>
+</br>
+	Please enter your current password and a new password. Please verify your new password by entering it twice.<br/><br/>';
     
     $main_content .= '
 				<form action="?subtopic=accountmanagement&action=changepassword" method="post" >
@@ -116,10 +124,7 @@ if (!isset($_REQUEST['passwordchanged']) && $_REQUEST['passwordchanged'] != "don
 								<tr>
 									<td style="border:0px;" >
 										<input type="hidden" name="step" value="change" >
-										<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
-											<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-												<input class="ButtonText" type="image" name="Submit" alt="Submit" src="' . $layout_name . '/images/global/buttons/_sbutton_submit.gif" >
-											</div>
+										<button style="font-size:15px;float:left;">Submit</button>
 
 										</div>
 									</td>
@@ -129,17 +134,14 @@ if (!isset($_REQUEST['passwordchanged']) && $_REQUEST['passwordchanged'] != "don
 					</td>
 				<td>
 					<table border="0" cellspacing="0" cellpadding="0" >
-						<form action="?subtopic=accountmanagement&action=manage" method="post" >
+						
 							<tr>
 								<td style="border:0px;" >
-									<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
-										<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-											<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
-										</div>
+								<button onclick="location.href=\'?subtopic=accountmanagement\'" type="button" style="font-size:15px;float:right;">Cancel</button>
 									</div>
 								</td>
 							</tr>
-						</form>
+						
 					</table>
 				</td>
 			</tr>
