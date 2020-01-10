@@ -168,11 +168,6 @@
     text-align: inherit;
   }
   
-  label {
-    display: inline-block;
-    margin-bottom: 0.5rem;
-  }
-  
   button {
     border-radius: 0;
   }
@@ -2343,21 +2338,7 @@
   input[type="button"].btn-block {
     width: 100%;
   }
-  
-  .fade {
-    transition: opacity 0.15s linear;
-  }
-  
-  @media screen and (prefers-reduced-motion: reduce) {
-    .fade {
-      transition: none;
-    }
-  }
-  
-  .fade:not(.show) {
-    opacity: 0;
-  }
-  
+    
   .collapse:not(.show) {
     display: none;
   }
