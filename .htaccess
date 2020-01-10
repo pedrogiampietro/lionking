@@ -24,9 +24,9 @@ Options All -Indexes
 
 RewriteRule (.*\.log)$ - [R=404,L]
 
-ErrorDocument 403 https://warmen-ats.online/?subtopic=erro
-ErrorDocument 404 https://warmen-ats.online/?subtopic=erro
-ErrorDocument 500 https://warmen-ats.online/?subtopic=erro
+ErrorDocument 403 https://lionking.arksoft.site/?subtopic=erro
+ErrorDocument 404 https://lionking.arksoft.site/?subtopic=erro
+ErrorDocument 500 https://lionking.arksoft.site/?subtopic=erro
 
 # WC HTTPS Redirect
 RewriteCond %{HTTP:X-Forwarded-Proto} !https

@@ -28,8 +28,8 @@ if ($is_https) {
 /** @var array $config */
 $config['base_url'] = $base_url;
 $config['site']['base_url'] = $base_url;
-$config['site']['realurl'] = "https://sv2.warmen-ats.online/"; //Colocar a url real para seu website sem www
-$config['site']['realurlwww'] = "https://sv2.warmen-ats.online/"; //Colocar a url real para seu website com www CASO SEJA UM SUBDOMINIO COLOCAR A MSM URL DA URL REAL
+$config['site']['realurl'] = "https://lionking.arksoft.site/"; //Colocar a url real para seu website sem www
+$config['site']['realurlwww'] = "https://lionking.arksoft.site/"; //Colocar a url real para seu website com www CASO SEJA UM SUBDOMINIO COLOCAR A MSM URL DA URL REAL
 $config['site']['testurl'] = "http://localhost/"; // colocar a url que você utiliza para testar seu site (LOCALHOST)
 /** END SERVER URLS */
 
@@ -44,8 +44,8 @@ if ($config['base_url'] == $config['site']['realurl'] || $config['base_url'] == 
 /** END SERVER PATHS */
 
 /** GOOGLE RECAPTCHA VALUES */
-$config['site']['gRecaptchaSecret'] = "6LcaG8sUAAAAAFO84jCG3biOAh7UKRWkcpcLTSHa";
-$config['site']['gRecaptchaSiteKey'] = "6LcaG8sUAAAAAEleKDbk7iltDXkBltpr9NDZCYII";
+$config['site']['gRecaptchaSecret'] = "6Lc6BM4UAAAAACFBWfGXO7VDct2aFUSSnrJFA8uE";
+$config['site']['gRecaptchaSiteKey'] = "6Lc6BM4UAAAAAA7jtl-e6JURYPr7FYgJBjt8KxWT";
 
 /** WIDGETS CONFIG */
 $config['site']['widget_rank'] = TRUE;
@@ -396,8 +396,8 @@ $config['sale']['subProductName'] = "Coins";
 /** LAYOUT CONFIGS */
 $config['site']['layout'] = 'yinz'; //Layout Name
 $config['site']['vdarkborder'] = '#505050';
-$config['site']['darkborder'] = '#D4C0A1';
-$config['site']['lightborder'] = '#F1E0C6';
+$config['site']['darkborder'] = '#291b1c'; //cor escura do site
+$config['site']['lightborder'] = '#4e3623'; // marrom claro
 $config['site']['download_page'] = FALSE;
 $config['site']['serverinfo_page'] = TRUE;
 $config['site']['cssVersion'] = "?vs=2.0.6";

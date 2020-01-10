@@ -14,7 +14,7 @@ if (!defined('INITIALIZED'))
         <meta name="description" content="The true oldschool gameplay." />
         <meta name="keywords" content="ArkSoft" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <link rel="icon" href="<?php echo $layout_name; ?>/assets/img/ArkSoft-icon.png">
+        <link rel="icon" href="<?php echo $layout_name; ?>/assets/img/favicon.ico">
 
         <!-- CSS -->
         <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/css/main.css<?php echo $css_version; ?>" type="text/css" />
@@ -22,6 +22,7 @@ if (!defined('INITIALIZED'))
         <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/css/fontello.css<?php echo $css_version; ?>" type="text/css" />
         <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/fonts/cambria.ttf" type="text/css" />
         <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/css/lightbox.min.css<?php echo $css_version; ?>" type="text/css" />
+        <link rel="stylesheet" href="<?php echo $layout_name; ?>/assets/css/bootstrap.css<?php echo $css_version; ?>" type="text/css" />
 
         <!-- JS -->
         <!-- Remember to include jQuery :) -->
@@ -116,31 +117,31 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                     <div id="nav">
                         <ul class="menu-list">
                             <li class="menu-element">
-                                <a href="/" class="menu-msg">HOME</a>
+                                <a href="#" class="menu-msg">HOME</a>
                             </li>
                             <li class="menu-separator">
                                 <img src="<?php echo $layout_name; ?>/assets/img/header-menu-spacer.png" />
                             </li>
                             <li class="menu-element">
-                                <a href="/sub.php?page=community" class="menu-msg">COMMUNITY</a>
+                                <a href="?subtopic=community class="menu-msg">COMMUNITY</a>
                             </li>
                             <li class="menu-separator">
                                 <img src="<?php echo $layout_name; ?>/assets/img/header-menu-spacer.png" />
                             </li>
                             <li class="menu-element">
-                                <a href="/highscores" class="menu-msg">HIGHSCORES</a>
+                                <a href="#" class="menu-msg">HIGHSCORES</a>
                             </li>
                             <li class="menu-separator">
                                 <img src="<?php echo $layout_name; ?>/assets/img/header-menu-spacer.png" />
                             </li>
                             <li class="menu-element">
-                                <a href="sub.php?page=library" class="menu-msg">LIBRARY</a>
+                                <a href="?subtopic=library" class="menu-msg">LIBRARY</a>
                             </li>
                             <li class="menu-separator">
                                 <img src="<?php echo $layout_name; ?>/assets/img/header-menu-spacer.png" />
                             </li>
                             <li class="menu-element">
-                                <a href="/shop" class="menu-msg">PREMIUM</a>
+                                <a href="#" class="menu-msg">PREMIUM</a>
                             </li>
                             <li class="menu-separator">
                                 <img src="<?php echo $layout_name; ?>/assets/img/header-menu-spacer.png" />

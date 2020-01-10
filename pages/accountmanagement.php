@@ -235,9 +235,7 @@ if (!$logged) {
 																<td >
 																	<div style="float: right; margin-top: 20px;" >
 																		<form class="MediumButtonForm" action="?subtopic=createaccount" method="post" >
-																			<div class="MediumButtonBackground" style="background-image:url(' . $layout_name . '/images/global/buttons/mediumbutton.gif)" onMouseOver="MouseOverMediumButton(this);" onMouseOut="MouseOutMediumButton(this);" ><div class="MediumButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/mediumbutton-over.gif)" onMouseOver="MouseOverMediumButton(this);" onMouseOut="MouseOutMediumButton(this);" ></div>
-																				<input class="MediumButtonText" type="image" name="Create Account" alt="Create Account" src="' . $layout_name . '/images/global/buttons/mediumbutton_createaccount.png" />
-																			</div>
+																		<button style="font-size:20px;margin-left:40px;">Register</button>
 																		</form>
 																	</div>
 																	<div id="LoginCreateAccountBox" >

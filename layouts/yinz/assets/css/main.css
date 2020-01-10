@@ -10,6 +10,13 @@
     transition: none !important;
   }
 
+  /* google API */
+  .grecaptcha-badge{
+    display:none !important;
+}
+
+/* finaly google api */
+
 /* layout index */
 .frame-box {
     position: relative;

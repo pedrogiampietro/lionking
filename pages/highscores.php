@@ -150,7 +150,11 @@ $main_content = '
          <div class="CaptionContainer">
             <div class="CaptionInnerContainer">
                <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>        
-               <div class="Text">Highscores Filter</div>
+               <div class="community-up-section">
+					<div class="community-up-text">
+						Highscores
+					</div>
+				</div>
                <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>      
             </div>
          </div>
@@ -169,12 +173,7 @@ $main_content = '
                                     </select>
                                  </td>
                                  <td rowspan="3">
-                                    <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)">
-                                       <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
-                                          <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);"></div>
-                                          <input class="ButtonText" type="image" name="Submit" alt="Submit" src="' . $layout_name . '/images/global/buttons/_sbutton_submit.gif">
-                                       </div>
-                                    </div>
+                                          <button style="font-size:20px;margin-left:40px;">Submit</button>
                                  </td>
                               </tr>
                               <tr>
