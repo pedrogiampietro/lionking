@@ -7,10 +7,10 @@ if (!defined('INITIALIZED'))
     <div class="community-up-text">
         Download Client
     </div>
-    <a href="Tekania_Online_v111.7z">
+    <a href="#">
         <div class="community-box" style="min-height:200px;">
             <div class="community-box-img" style="margin-top:30px;">
-                <img src="<?php echo $layout_name; ?>/assets/img/download-icon.png">
+                <img src="<?php echo $layout_name; ?>/assets/img/icons/download-icon.png">
             </div>
             <div class="community-box-text">
                 <div class="community-box-text-title">

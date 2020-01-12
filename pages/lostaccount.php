@@ -7,7 +7,11 @@ if ($config['site']['send_emails']) {
     if (!$logged) {
         if (!isset($_REQUEST['step'])) {
             $main_content .= '
-				 <B>Welcome to the Lost Account Interface!</B><BR>
+			<div class="community-up-section">
+			<div class="community-up-text">
+				Lost Account Interface
+			</div>
+		</div><BR>
 				<BR>
 				If you have lost access to your account, this interface can help you. Of course, you need to prove that your claim to the account is justified. Enter the requested data and follow the instructions carefully. Please understand there is no way to get access to your lost account if the interface cannot help you. Two further options to change account data are available if you have a registered account.<BR>
 				<BR>

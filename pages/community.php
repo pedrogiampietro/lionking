@@ -7,7 +7,7 @@ if (!defined('INITIALIZED'))
     <div class="community-up-text">
         Community
     </div>
-    <a href="sub.php?page=search">
+    <a href="?subtopic=characters">
         <div class="community-box">
             <div class="community-box-img">
                 <img src="<?php echo $layout_name; ?>/assets/img/community/search-character.png">
@@ -23,7 +23,7 @@ if (!defined('INITIALIZED'))
             <div style="clear:both;"></div>
         </div>
     </a>
-    <a href="onlinelist">
+    <a href="?subtopic=whoisonline">
         <div class="community-box">
             <div class="community-box-img">
                 <img src="<?php echo $layout_name; ?>/assets/img/community/who-isonline.png">
@@ -39,7 +39,7 @@ if (!defined('INITIALIZED'))
             <div style="clear:both;"></div>
         </div>
     </a>
-    <a href="guilds">
+    <a href="?subtopic=guilds">
         <div class="community-box">
             <div class="community-box-img">
                 <img src="<?php echo $layout_name; ?>/assets/img/community/search-guilds.png">
@@ -55,7 +55,8 @@ if (!defined('INITIALIZED'))
             <div style="clear:both;"></div>
         </div>
     </a>
-    <a href="houses">
+    <!--
+    <a href="?subtopic=houses">
         <div class="community-box">
             <div class="community-box-img">
                 <img src="<?php echo $layout_name; ?>/assets/img/community/check-houses.png">
@@ -70,7 +71,7 @@ if (!defined('INITIALIZED'))
             </div>
             <div style="clear:both;"></div>
         </div>
-    </a>
+    </a> -->
 </div>
 <!-- Slider -->
 <script>

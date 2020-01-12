@@ -187,33 +187,21 @@ function showPost($topic, $text, $smile)
 
  $main_content .= '<div class="slider-container">
  <div class="slider fade" style="display: block;">
-     <a href="sub.php?page=about">
-     <img src="layout/img/slides/04.png" style="width: 100%">
+     <a href="#">
+     <img src="layouts/yinz/assets/img/slides/1.png" style="width: 100%">
          <div class="text">Welcome to LionKing</div>
      </a>	
  </div>
  <div class="slider fade" style="display: none;">
-     <a href="client-features">
-     <img src="layout/img/slides/02.png" style="width: 100%">
+     <a href="#">
+     <img src="layouts/yinz/assets/img/slides/2.png" style="width: 100%">
      <div class="text">Client Features</div>
      </a>
  </div>
  <div class="slider fade" style="display: none;">
-     <a href="sub.php?page=gallery">
-     <img src="layout/img/slides/03.png" style="width: 100%">
-     <div class="text">Gallery</div>
-     </a>
- </div>
- <div class="slider fade" style="display: none;">
-     <a href="sub.php?page=rules">
-     <img src="layout/img/slides/01.png" style="width: 100%">
-     <div class="text">Server Rules</div>
-     </a>
- </div>
- <div class="slider fade" style="display: none;">
-     <a href="sub.php?page=map">
-     <img src="layout/img/slides/05.png" style="width: 100%">
-     <div class="text">World Map</div>
+     <a href="#">
+     <img src="layouts/yinz/assets/img/slides/3.png" style="width: 100%">
+     <div class="text">Wars</div>
      </a>
  </div>
 

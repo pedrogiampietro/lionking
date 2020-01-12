@@ -117,19 +117,19 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                     <div id="nav">
                         <ul class="menu-list">
                             <li class="menu-element">
-                                <a href="#" class="menu-msg">HOME</a>
+                                <a href="?subtopic=latestnews" class="menu-msg">HOME</a>
                             </li>
                             <li class="menu-separator">
                                 <img src="<?php echo $layout_name; ?>/assets/img/header-menu-spacer.png" />
                             </li>
                             <li class="menu-element">
-                                <a href="?subtopic=community class="menu-msg">COMMUNITY</a>
+                                <a href="?subtopic=community" class="menu-msg">COMMUNITY</a>
                             </li>
                             <li class="menu-separator">
                                 <img src="<?php echo $layout_name; ?>/assets/img/header-menu-spacer.png" />
                             </li>
                             <li class="menu-element">
-                                <a href="#" class="menu-msg">HIGHSCORES</a>
+                                <a href="?subtopic=highscores" class="menu-msg">HIGHSCORES</a>
                             </li>
                             <li class="menu-separator">
                                 <img src="<?php echo $layout_name; ?>/assets/img/header-menu-spacer.png" />
@@ -141,13 +141,13 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                                 <img src="<?php echo $layout_name; ?>/assets/img/header-menu-spacer.png" />
                             </li>
                             <li class="menu-element">
-                                <a href="#" class="menu-msg">PREMIUM</a>
+                                <a href="#" class="menu-msg">Help</a>
                             </li>
                             <li class="menu-separator">
                                 <img src="<?php echo $layout_name; ?>/assets/img/header-menu-spacer.png" />
                             </li>
                             <li class="menu-element">
-                                <a href="#" target="_BLANK" class="menu-msg">DISCORD</a>
+                                <a href="#" class="menu-msg">Donate</a>
                             </li>
                         </ul>
                     </div>
@@ -301,7 +301,7 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                                         Game
                                     </div>
                                 </div>
-                                <a href="register">
+                                <a href="?subtopic=createaccount">
                                     <div class="game-register">
                                         <div class="game-register-image">
                                             <img src="<?php echo $layout_name; ?>/assets/img/icons/register-icon.png">
@@ -311,7 +311,7 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                                         </div>
                                     </div>
                                 </a>
-                                <a href="recovery">
+                                <a href="?subtopic=lostaccount">
                                     <div class="game-download">
                                         <div class="game-download-image">
                                             <img src="<?php echo $layout_name; ?>/assets/img/icons/lostaccount-icon.png">
@@ -321,7 +321,7 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                                         </div>
                                     </div>
                                 </a>
-                                <a href="downloads">
+                                <a href="?subtopic=downloadclient">
                                     <div class="game-download">
                                         <div class="game-download-image">
                                             <img src="<?php echo $layout_name; ?>/assets/img/icons/download-icon.png">
@@ -342,16 +342,39 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                                     </div>
                                     <div style="clear: both;"></div>
                                 </div>
-                                <a href="onlinelist">
-                                    <div class="server-status-online">
-                                        <div class="server-status-online-icon">
-                                            <img src="<?php echo $layout_name; ?>/assets/img/status-on.png">
-                                        </div>
-                                        <div class="server-status-online-text">
-                                            <span class="server-status-online-number">0</span> Players Online
-                                        </div>
-                                    </div>
-                                </a>
+
+                                    <?php       $accounts = $SQL->query('SELECT COUNT(*) FROM `accounts` WHERE `id`>0;')->fetch();
+                                                @$sock = fsockopen($config['site']['ip'], $config['site']['statusPort'], $errno, $errstr, 1);
+                                                if (!$sock) {
+                                                    echo '
+                                                    <div class="server-status-online">
+                                                         <div class="server-status-online-icon">
+                                                            <img src="layouts/yinz/assets/img/status-off.png">
+                                                         </div>
+                                                         <div class="server-status-online-text">
+                                                         Servidor Offline
+                                                    </div>
+                                                </div>';
+                                                } else {
+                                                    $info = chr(6) . chr(0) . chr(255) . chr(255) . 'info';
+                                                    fwrite($sock, $info);
+                                                    $data = '';
+                                                    while (!feof($sock)) $data .= fgets($sock, 1024);
+                                                    fclose($sock);
+                                                    $online = $SQL->query('SELECT COUNT(*) FROM `players_online`;')->fetch();
+                                                    echo '
+                                                    <div class="server-status-online">
+                                                         <div class="server-status-online-icon">
+                                                            <img src="layouts/yinz/assets/img/status-on.png">
+                                                         </div>
+                                                         <div class="server-status-online-text">
+                                                        <span class="server-status-online-number"><a href="?subtopic=whoisonline"> ' . $online[0] . '</span> Players Online</a>
+                                                    </div>
+                                                </div>';
+                                                }
+                                    ?>
+
+                
                                 <div class="server-status-online">
                                     <div class="server-status-save-icon">
                                         <img src="<?php echo $layout_name; ?>/assets/img/star.png">
@@ -359,7 +382,7 @@ text-shadow: 0 0 10px #FFFFFF;"></div>
                                     <div class="server-status-save-text">
                                         Registered Accounts:
                                     </div>
-                                    <span class="server-status-save-time">0</span>
+                                    <span class="server-status-save-time"><?php echo $accounts[0]?></span>
                                     <div style="clear: both;"></div>
                                 </div>
 

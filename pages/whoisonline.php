@@ -67,13 +67,11 @@ foreach ($players_online_data as $player) {
 $main_content .= '
 <form action="./?subtopic=worlds" method="post">
    <div class="TableContainer">
-      <div class="CaptionContainer">
-         <div class="CaptionInnerContainer">
-            <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>
-            <div class="Text">World Selection</div>
-            <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>
-         </div>
-      </div>
+   <div class="community-up-section">
+   <div class="community-up-text">
+	  World Selection
+   </div>
+</div>
       <table class="Table1" cellpadding="0" cellspacing="0">
          <tbody>
             <tr>
@@ -89,12 +87,7 @@ $main_content .= '
                                  </select>
                               </td>
                               <td style="text-align:left;">
-                                 <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)">
-                                    <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
-                                       <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);"></div>
-                                       <input class="ButtonText" type="image" name="Submit" alt="Submit" src="' . $layout_name . '/images/global/buttons/_sbutton_submit.gif">
-                                    </div>
-                                 </div>
+									   <button style="font-size:20px;margin-left:40px;">Submit</button>
                               </td>
                            </tr>
                         </tbody>
@@ -129,7 +122,7 @@ $main_content .= '
 						<table style="width:100%;" >
 							<tr>
 								<td class="LabelV200" >Status:</td>
-								<td><div style="position: absolute; top: 35px; right: 6px;" ><img class="PVPTypeIcon" src="' . $layout_name . '/images/account/option_server_pvp_type_open.gif" alt="Server PVP Type" /></div>
+								<td>
 									' . (($config['status']['serverStatus_online'] == 1) ? 'Online' : 'Offline') . '</td>
 							</tr>
 							<tr>
@@ -267,19 +260,11 @@ $main_content .= '
 	<form method="post" action="?subtopic=characters">
 		<div class="TableContainer" >
 			<table class="Table1" cellpadding="0" cellspacing="0">
-				<div class="CaptionContainer" >
-					<div class="CaptionInnerContainer" > 
-						<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-						<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-						<div class="Text" >Search Character</div>
-						<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-						<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-						<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-					</div>
+				<div class="community-up-section">
+				<div class="community-up-text">
+					Search Characters
 				</div>
+			</div>
 				<tr>
 					<td>
 						<div class="InnerTableContainer" >
@@ -288,11 +273,8 @@ $main_content .= '
 									<td style="vertical-align:middle;" class="LabelV150" >Character Name:</td>
 									<td style="width:170px;" ><input style="width:165px;" name="name" value="" size="29" maxlength="29" /></td>
 									<td>
-										<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
-											<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-												<input class="ButtonText" type="image" name="Submit" alt="Submit" src="' . $layout_name . '/images/global/buttons/_sbutton_submit.gif" >
+											<button style="font-size:20px;margin-left:40px;">Search</button>
 											</div>
-										</div>
 									</td>
 								</tr>
 							</table>

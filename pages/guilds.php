@@ -10,19 +10,12 @@ if ($action == "") {
     $main_content .= '
 		<div class="TableContainer" >
 			<table class="Table3" cellpadding="0" cellspacing="0" >
-				<div class="CaptionContainer" >
-					<div class="CaptionInnerContainer" >
-						<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-						<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-						<div class="Text" >Active Guilds on ' . htmlspecialchars($config['server']['serverName']) . '</div>
-						<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-						<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-						<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
+			<div class="community-up-section">
+					<div class="community-up-text">
+					<div class="Text" >Active Guilds on ' . htmlspecialchars($config['server']['serverName']) . '</div>
 					</div>
 				</div>
+				</br>
 				<tr>
 					<td><div class="InnerTableContainer" >
 							<table style="width:100%;" >
@@ -33,7 +26,7 @@ if ($action == "") {
 										<div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);" >
 											<div class="TableContentContainer" >
 												<table class="TableContent" width="100%" >
-													<TR BGCOLOR=#D4C0A1>
+													<TR BGCOLOR=#4e3623>
 														<TD WIDTH=64><B>Logo</B></TD>
 														<TD WIDTH=100%><B>Description</B></TD>
 														<TD WIDTH=56><B>&#160;</B></TD>
@@ -61,10 +54,7 @@ if ($action == "") {
 																		<form action="?subtopic=guilds&action=view" method="post" >
 																			<tr>
 																				<td style="border:0px;" ><input type="hidden" name=GuildName value="' . htmlspecialchars($guild->getName()) . '" >
-																					<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
-																						<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-																							<input class="ButtonText" type="image" name="View" alt="View" src="' . $layout_name . '/images/global/buttons/_sbutton_view.gif" >
-																						</div>
+																						<button style="font-size:14px;margin-left:40px;">View</button>
 																					</div>
 																				</td>
 																			</tr>
@@ -117,11 +107,7 @@ if ($action == "") {
 						<form action="?subtopic=guilds&action=create" method="post" >
 							<tr>
 								<td style="border:0px;" >
-									<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
-										<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-											<input class="ButtonText" type="image" name="FoundGuild" alt="FoundGuild" src="' . $layout_name . '/images/global/buttons/_sbutton_foundguild.gif" >
-										</div>
-									</div>
+										<button style="font-size:20px;margin-left:260px;">Found Guild</button>										
 								</td>
 							</tr>
 						</form>
@@ -142,19 +128,11 @@ if ($action == "view") {
         $main_content .= '
 				<div class="TableContainer" >
 					<table class="Table1" cellpadding="0" cellspacing="0" >
-						<div class="CaptionContainer" >
-							<div class="CaptionInnerContainer" >
-								<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-								<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-								<div class="Text" >Error</div>
-								<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-								<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-								<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							</div>
+						<div class="community-up-section">
+						<div class="community-up-text">
+							Error
 						</div>
+					</div>
 						<tr>
 							<td>
 								<div class="InnerTableContainer" >
@@ -180,7 +158,7 @@ if ($action == "view") {
 									<tr>
 										<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -312,10 +290,7 @@ if ($action == "view") {
 																		<td style="border:0px;" >
 																			<input type="hidden" name=action value=guildwars >
 																			<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
-																			<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
-																				<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-																					<input class="ButtonText" type="image" name="Guild Wars" alt="Guild Wars" src="' . $layout_name . '/images/global/buttons/_sbutton_guildwars.gif" >
-																				</div>
+																				<button>Guild Wars</button>		
 																			</div>
 																		</td>
 																	</tr>
@@ -330,11 +305,7 @@ if ($action == "view") {
                                                                                 <input type="hidden" name="action" value="guildevents" >
                                                                                 <input type="hidden" name="GuildName" value="' . $guild->getName() . '" >
                                                                                 <!--<input type="hidden" name=world value="Neptera" >-->
-                                                                                <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
-                                                                                    <div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-                                                                                        <input class="ButtonText" type="image" name="Guild Events" alt="Guild Events" src="' . $layout_name . '/images/global/buttons/_sbutton_guildevents.gif" >
-                                                                                    </div>
-                                                                                </div>
+																					<button>Guild Events</button>	
 																			</form>
 																		</td>
 																	</tr>
@@ -555,11 +526,7 @@ if ($action == "view") {
 														<input type="hidden" name="action" value="view" >
 														<input type="hidden" name="onlyshowonline" value="1" >
 														<input type="hidden" name="GuildName" value="' . $_REQUEST['GuildName'] . '" >
-														<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
-															<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-																<input class="ButtonText" type="image" name="Show Online" alt="Show Online" src="' . $layout_name . '/images/global/buttons/_sbutton_showonline.gif" >
-															</div>
-														</div>
+															<button>Show Online</button>
 													</form>
 												</td>
 											</tr>
@@ -700,7 +667,7 @@ if ($action == "view") {
 														</TR>';
         else {
             $main_content .= '
-														<TR BGCOLOR=#D4C0A1>
+														<TR BGCOLOR=#4e3623>
 															<TD WIDTH=70%><B>Name</B></TD>
 															<TD WIDTH=30%><B>Invitation Date</B></TD>
 														</TR>';
@@ -804,7 +771,7 @@ if ($action == "view") {
 						<form action="?subtopic=guilds" method="post" style="padding:0px;margin:0px;" >
 							<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 								<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-									<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+									<center><button>Back</button></center>
 								</div>
 							</div>
 						</form>
@@ -876,19 +843,11 @@ if ($action == "create") {
         $main_content .= '
 			<div class="TableContainer" >
 				<table class="Table1" cellpadding="0" cellspacing="0" >
-					<div class="CaptionContainer" >
-						<div class="CaptionInnerContainer" >
-							<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<div class="Text" >Error</div>
-							<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						</div>
-					</div>
+				<div class="community-up-section">
+				<div class="community-up-text">
+					Error
+				</div>
+			</div>
 					<tr>
 						<td>
 							<div class="InnerTableContainer" >
@@ -922,7 +881,7 @@ if ($action == "create") {
 										<input type="hidden" name=leader value="' . $leader . '" >
 										<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 											<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-												<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+												<center><button>Back</button></center>
 											</div>
 										</div>
 									</td>
@@ -1027,7 +986,7 @@ if ($action == "create") {
 								<div class="InnerTableContainer" >
 									<table style="width:100%;" >
 										<TR>
-											<TD BGCOLOR=#D4C0A1>
+											<TD BGCOLOR=#4e3623>
 												<TABLE BORDER=0 CELLPADDING=1>
 													<TR>
 														<TD>Guild Name:</TD>
@@ -1085,7 +1044,7 @@ if ($action == "create") {
 										<td style="border:0px;" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -1170,19 +1129,11 @@ if ($action == "invite") {
         $main_content .= '
 			<div class="TableContainer" >
 				<table class="Table1" cellpadding="0" cellspacing="0" >
-					<div class="CaptionContainer" >
-						<div class="CaptionInnerContainer" >
-							<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<div class="Text" >Error</div>
-							<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						</div>
+					<div class="community-up-section">
+					<div class="community-up-text">
+						Error
 					</div>
+				</div>
 					<tr>
 						<td>
 							<div class="InnerTableContainer" >
@@ -1291,7 +1242,7 @@ if ($action == "invite") {
 							<div class="InnerTableContainer" >
 								<table style="width:100%;" >
 									<TR>
-										<TD BGCOLOR=#D4C0A1>
+										<TD BGCOLOR=#4e3623>
 											<FORM ACTION="?subtopic=guilds" METHOD=post>
 												<TABLE BORDER=0 CELLPADDING=1>
 													<TR>
@@ -1349,7 +1300,7 @@ if ($action == "invite") {
 								<div class="InnerTableContainer" >
 									<table style="width:100%;" >
 										<TR>
-											<TD BGCOLOR=#D4C0A1>
+											<TD BGCOLOR=#4e3623>
 												<FORM ACTION="?subtopic=guilds" METHOD=post>
 													<TABLE BORDER=0 CELLPADDING=1>
 														<TR>
@@ -1402,7 +1353,7 @@ if ($action == "invite") {
 										<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 										<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 											<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-												<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+												<center><button>Back</button></center>
 											</div>
 										</div>
 									</td>
@@ -1466,19 +1417,11 @@ if ($action == "leave") {
         $main_content .= '
 			<div class="TableContainer" >
 				<table class="Table1" cellpadding="0" cellspacing="0" >
-					<div class="CaptionContainer" >
-						<div class="CaptionInnerContainer" >
-							<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<div class="Text" >Error</div>
-							<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						</div>
+					<div class="community-up-section">
+					<div class="community-up-text">
+						Error
 					</div>
+				</div>
 					<tr>
 						<td>
 							<div class="InnerTableContainer" >
@@ -1538,7 +1481,7 @@ if ($action == "leave") {
 											<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -1574,14 +1517,14 @@ if ($action == "leave") {
 											<TR>';
             if (!empty($array_of_player_ig)) {
                 $main_content .= '
-												<TD BGCOLOR=#D4C0A1>';
+												<TD BGCOLOR=#4e3623>';
                 sort($array_of_player_ig);
                 foreach ($array_of_player_ig as $player_to_leave)
                     $main_content .= '
 														<INPUT TYPE=radio NAME="character" VALUE="' . htmlspecialchars($player_to_leave) . '" ' . ((count($array_of_player_ig) == 1) ? 'checked' : '') . '>' . htmlspecialchars($player_to_leave) . '<BR>';
                 $main_content .= '</TD>';
             } else {
-                $main_content .= '<TD BGCOLOR=#D4C0A1>Any of your characters can\'t leave guild.</TD>';
+                $main_content .= '<TD BGCOLOR=#4e3623>Any of your characters can\'t leave guild.</TD>';
             }
             $main_content .= '
 											</TR>
@@ -1620,7 +1563,7 @@ if ($action == "leave") {
 											<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -1701,19 +1644,11 @@ if ($action == "join") {
         $main_content .= '
 			<div class="TableContainer" >
 				<table class="Table1" cellpadding="0" cellspacing="0" >
-					<div class="CaptionContainer" >
-						<div class="CaptionInnerContainer" >
-							<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<div class="Text" >Error</div>
-							<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						</div>
+					<div class="community-up-section">
+					<div class="community-up-text">
+						Error
 					</div>
+				</div>
 					<tr>
 						<td>
 							<div class="InnerTableContainer" >
@@ -1772,7 +1707,7 @@ if ($action == "join") {
 											<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -1808,14 +1743,14 @@ if ($action == "join") {
 											<TR>';
             if (!empty($list_of_invited_players)) {
                 $main_content .= '
-												<TD BGCOLOR=#D4C0A1>';
+												<TD BGCOLOR=#4e3623>';
                 sort($list_of_invited_players);
                 foreach ($list_of_invited_players as $invited_player_from_list)
                     $main_content .= '
 														<INPUT TYPE=radio NAME="character" VALUE="' . htmlspecialchars($invited_player_from_list) . '" ' . ((count($list_of_invited_players) == 1) ? 'checked' : '') . '>' . htmlspecialchars($invited_player_from_list) . '<BR>';
                 $main_content .= '</TD>';
             } else {
-                $main_content .= '<TD BGCOLOR=#D4C0A1>Any of your characters can\'t join guild.</TD>';
+                $main_content .= '<TD BGCOLOR=#4e3623>Any of your characters can\'t join guild.</TD>';
             }
             $main_content .= '
 											</TR>
@@ -1854,7 +1789,7 @@ if ($action == "join") {
 											<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -1912,19 +1847,11 @@ if ($action == "ranks") {
         $main_content .= '
 			<div class="TableContainer" >
 				<table class="Table1" cellpadding="0" cellspacing="0" >
-					<div class="CaptionContainer" >
-						<div class="CaptionInnerContainer" >
-							<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<div class="Text" >Guild Rank Errors</div>
-							<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						</div>
+					<div class="community-up-section">
+					<div class="community-up-text">
+						Guild Rank Error
 					</div>
+				</div>
 					<tr>
 						<td>
 							<div class="InnerTableContainer" >
@@ -1985,7 +1912,7 @@ if ($action == "ranks") {
 											<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -2040,7 +1967,7 @@ if ($action == "ranks") {
 											<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -2082,7 +2009,7 @@ if ($action == "ranks") {
 													<div class="TableContentContainer" >
 														<table class="TableContent" width="100%" >
 															<TR>
-																<TD BGCOLOR=#D4C0A1>
+																<TD BGCOLOR=#4e3623>
 																	<TABLE BORDER=0 CELLPADDING=2>
 																		<FORM ACTION="?subtopic=guilds" METHOD=post>
 																			<TR>
@@ -2168,7 +2095,7 @@ if ($action == "ranks") {
 													<div class="TableContentContainer" >
 														<table class="TableContent" width="100%">
 															<TR>
-																<TD BGCOLOR=#D4C0A1>
+																<TD BGCOLOR=#4e3623>
 																<FORM ACTION="?subtopic=guilds" METHOD=post>
 																	<TABLE BORDER=0 CELLPADDING=3>
 																		<tr>
@@ -2220,7 +2147,7 @@ if ($action == "ranks") {
 											<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -2336,19 +2263,11 @@ if ($action == "members") {
         $main_content .= '
 			<div class="TableContainer" >
 				<table class="Table1" cellpadding="0" cellspacing="0" >
-					<div class="CaptionContainer" >
-						<div class="CaptionInnerContainer" >
-							<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<div class="Text" >Members Errors</div>
-							<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						</div>
+					<div class="community-up-section">
+					<div class="community-up-text">
+						Members Error
 					</div>
+				</div>
 					<tr>
 						<td>
 							<div class="InnerTableContainer" >
@@ -2376,7 +2295,7 @@ if ($action == "members") {
 											<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -2429,7 +2348,7 @@ if ($action == "members") {
 												<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 												<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 													<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-														<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+														<center><button>Back</button></center>
 													</div>
 												</div>
 											</td>
@@ -2502,7 +2421,7 @@ if ($action == "members") {
 												<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 												<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 													<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-														<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+														<center><button>Back</button></center>
 													</div>
 												</div>
 											</td>
@@ -2555,7 +2474,7 @@ if ($action == "members") {
 												<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 												<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 													<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-														<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+														<center><button>Back</button></center>
 													</div>
 												</div>
 											</td>
@@ -2590,7 +2509,7 @@ if ($action == "members") {
 								<div class="InnerTableContainer" >
 									<table style="width:100%;" >
 										<TR>
-											<TD BGCOLOR=#D4C0A1>
+											<TD BGCOLOR=#4e3623>
 												<TABLE BORDER=0 CELLPADDING=1>
 													<TR>
 														<TD VALIGN=top>
@@ -2679,7 +2598,7 @@ if ($action == "members") {
 										<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 										<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 											<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-												<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+												<center><button>Back</button></center>
 											</div>
 										</div>
 									</td>
@@ -2730,19 +2649,11 @@ if ($action == "disband") {
         $main_content .= '
 			<div class="TableContainer" >
 				<table class="Table1" cellpadding="0" cellspacing="0" >
-					<div class="CaptionContainer" >
-						<div class="CaptionInnerContainer" >
-							<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<div class="Text" >Error</div>
-							<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						</div>
+					<div class="community-up-section">
+					<div class="community-up-text">
+						Error
 					</div>
+				</div>
 					<tr>
 						<td>
 							<div class="InnerTableContainer" >
@@ -2770,7 +2681,7 @@ if ($action == "disband") {
 										<tr>
 											<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 													<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-														<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+														<center><button>Back</button></center>
 													</div>
 												</div>
 											</td>
@@ -2820,7 +2731,7 @@ if ($action == "disband") {
 										<tr>
 											<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 													<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-														<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+														<center><button>Back</button></center>
 													</div>
 												</div>
 											</td>
@@ -2855,7 +2766,7 @@ if ($action == "disband") {
 										<div class="InnerTableContainer" >
 											<table style="width:100%;" >
 												<TR>
-													<TD BGCOLOR=#D4C0A1><TABLE BORDER=0 CELLPADDING=1>
+													<TD BGCOLOR=#4e3623><TABLE BORDER=0 CELLPADDING=1>
 															<TR>
 																<TD>Password:</TD>
 																<TD><INPUT TYPE=password NAME="password" SIZE=30 MAXLENGTH=29></TD>
@@ -2898,7 +2809,7 @@ if ($action == "disband") {
 											<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" >
 													<div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -2976,19 +2887,11 @@ if ($action == "description") {
             $main_content .= '
 				<div class="TableContainer" >
 					<table class="Table1" cellpadding="0" cellspacing="0" >
-						<div class="CaptionContainer" >
-							<div class="CaptionInnerContainer" >
-								<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-								<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-								<div class="Text" >Guild Description Error</div>
-								<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-								<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-								<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							</div>
+						<div class="community-up-section">
+						<div class="community-up-text">
+							Guild Description Error
 						</div>
+					</div>
 						<tr>
 							<td>
 								<div class="InnerTableContainer" >
@@ -3015,7 +2918,7 @@ if ($action == "description") {
 									<tr>
 										<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -3031,19 +2934,11 @@ if ($action == "description") {
             $main_content .= '
 				<div class="TableContainer" >
 					<table class="Table1" cellpadding="0" cellspacing="0" >
-						<div class="CaptionContainer" >
-							<div class="CaptionInnerContainer" >
-								<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-								<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-								<div class="Text" >Guild Logo Error</div>
-								<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-								<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-								<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							</div>
+						<div class="community-up-section">
+						<div class="community-up-text">
+							Guild Logo Error
 						</div>
+					</div>
 						<tr>
 							<td>
 								<div class="InnerTableContainer" >
@@ -3070,7 +2965,7 @@ if ($action == "description") {
 									<tr>
 										<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -3125,7 +3020,7 @@ if ($action == "description") {
 									<tr>
 										<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -3183,7 +3078,7 @@ if ($action == "description") {
 									<tr>
 										<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -3307,7 +3202,7 @@ if ($action == "description") {
 										<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 										<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 											<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-												<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+												<center><button>Back</button></center>
 											</div>
 										</div>
 									</td>
@@ -3418,7 +3313,7 @@ if ($action == "resignleadership") {
 											<tr>
 												<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 														<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-															<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+															<center><button>Back</button></center>
 														</div>
 													</div>
 												</td>
@@ -3453,7 +3348,7 @@ if ($action == "resignleadership") {
 											<div class="InnerTableContainer" >
 												<table style="width:100%;" >
 													<TR>
-														<TD BGCOLOR=#D4C0A1>
+														<TD BGCOLOR=#4e3623>
 															<TABLE BORDER=0 CELLPADDING=1>
 																<TR>
 																	<TD>
@@ -3532,7 +3427,7 @@ if ($action == "resignleadership") {
 													<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 													<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 														<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-															<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+															<center><button>Back</button></center>
 														</div>
 													</div>
 												</td>
@@ -3553,19 +3448,11 @@ if ($action == "resignleadership") {
         $main_content .= '
 				<div class="TableContainer" >
 					<table class="Table1" cellpadding="0" cellspacing="0" >
-						<div class="CaptionContainer" >
-							<div class="CaptionInnerContainer" >
-								<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-								<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-								<div class="Text" >Guild Leadership Error</div>
-								<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-								<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-								<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-								<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							</div>
+						<div class="community-up-section">
+						<div class="community-up-text">
+							Guild Leadership Error
 						</div>
+					</div>
 						<tr>
 							<td>
 								<div class="InnerTableContainer" >
@@ -3593,7 +3480,7 @@ if ($action == "resignleadership") {
 									<tr>
 										<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<center><button>Back</button></center>
 												</div>
 											</div>
 										</td>
@@ -3876,7 +3763,7 @@ if ($action == "guildwars") {
 							<input type="hidden" name=GuildName value="' . $_REQUEST['GuildName'] . '" >
 							<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 								<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-									<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+									<center><button>Back</button></center>
 								</div>
 							</div>
 						</td>
@@ -3959,7 +3846,7 @@ if ($action == 'declarewar') {
         foreach ($guild_errors as $guild_error)
             $main_content .= '<li>' . $guild_error . '</li>';
         $main_content .= '</div>    <div class="BoxFrameHorizontal" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-horizontal.gif);" /></div>    <div class="BoxFrameEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></div>    <div class="BoxFrameEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></div>  </div></div><br>';
-        $main_content .= '<br/><center><form action="?subtopic=guilds" METHOD=post><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div><input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" ></div></div></form></center>';
+        $main_content .= '<br/><center><form action="?subtopic=guilds" METHOD=post><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div><center><button>Back</button></center></div></div></form></center>';
     }
 }
 if ($action == 'guildwar_invite') {
@@ -4289,8 +4176,8 @@ if ($action == "guildevents") {
                                                                     <table class="TableContent" width="100%" >
                                                                         <tbody>
                                                                             <tr>
-                                                                                <td bgcolor="#D4C0A1" align="left" width="20%"><b>Owner:</b></td>
-                                                                                <td bgcolor="#D4C0A1" align="left"><a href="?subtopic=characters&name='.urlencode($guild_owner).'"><b>'.htmlspecialchars($guild_owner).'</b></a></td>
+                                                                                <td bgcolor="#4e3623" align="left" width="20%"><b>Owner:</b></td>
+                                                                                <td bgcolor="#4e3623" align="left"><a href="?subtopic=characters&name='.urlencode($guild_owner).'"><b>'.htmlspecialchars($guild_owner).'</b></a></td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td bgcolor="#F1E0C6" align="left" width="20%"><b>Founded in:</b></td>
@@ -4379,11 +4266,11 @@ if ($action == 'deletebyadmin') {
             if ($group_id_of_acc_logged >= $config['site']['access_admin_panel']) {
                 if ($_POST['todo'] == 'save') {
                     $guild->delete();
-                    $main_content .= '<div class="TableContainer" >  <table class="Table1" cellpadding="0" cellspacing="0" >    <div class="CaptionContainer" >      <div class="CaptionInnerContainer" >        <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>        <div class="Text" >Guild Deleted</div>        <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>      </div>    </div>    <tr>      <td>        <div class="InnerTableContainer" >          <table style="width:100%;" ><tr><td>Guild with ID <b>' . $guild_id . '</b> has been deleted.</td></tr>          </table>        </div>  </table></div></td></tr><br/><center><form action="?subtopic=guilds" METHOD=post><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div><input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" ></div></div></form></center>';
+                    $main_content .= '<div class="TableContainer" >  <table class="Table1" cellpadding="0" cellspacing="0" >    <div class="CaptionContainer" >      <div class="CaptionInnerContainer" >        <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>        <div class="Text" >Guild Deleted</div>        <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>      </div>    </div>    <tr>      <td>        <div class="InnerTableContainer" >          <table style="width:100%;" ><tr><td>Guild with ID <b>' . $guild_id . '</b> has been deleted.</td></tr>          </table>        </div>  </table></div></td></tr><br/><center><form action="?subtopic=guilds" METHOD=post><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div><center><button>Back</button></center></div></div></form></center>';
                 } else
                     $main_content .= '<div class="TableContainer" >  <table class="Table1" cellpadding="0" cellspacing="0" >    <div class="CaptionContainer" >      <div class="CaptionInnerContainer" >        <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>        <div class="Text" >Guild Deleted</div>        <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>      </div>    </div>    <tr>      <td>        <div class="InnerTableContainer" >          <table style="width:100%;" ><tr><td>Are you sure you want delete guild <b>' . htmlspecialchars($guild->getName()) . '</b>?<br>
 					<form action="?subtopic=guilds&guild=' . $guild_id . '&action=deletebyadmin" METHOD=post><input type="hidden" name="todo" value="save"><input type="submit" value="Yes, delete"></form>
-					</td></tr>          </table>        </div>  </table></div></td></tr><br/><center><form action="?subtopic=guilds" METHOD=post><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div><input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" ></div></div></form></center>';
+					</td></tr>          </table>        </div>  </table></div></td></tr><br/><center><form action="?subtopic=guilds" METHOD=post><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div><center><button>Back</button></center></div></div></form></center>';
             } else
                 $guild_errors[] = 'You are not an admin!';
         } else
@@ -4394,6 +4281,6 @@ if ($action == 'deletebyadmin') {
         foreach ($guild_errors as $guild_error)
             $main_content .= '<li>' . $guild_error . '</li>';
         $main_content .= '</div>    <div class="BoxFrameHorizontal" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-horizontal.gif);" /></div>    <div class="BoxFrameEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></div>    <div class="BoxFrameEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></div>  </div></div><br>';
-        $main_content .= '<br/><center><form action="?subtopic=guilds" METHOD=post><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div><input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" ></div></div></form></center>';
+        $main_content .= '<br/><center><form action="?subtopic=guilds" METHOD=post><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div><center><button>Back</button></center></div></div></form></center>';
     }
 }

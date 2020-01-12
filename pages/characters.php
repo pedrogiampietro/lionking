@@ -404,7 +404,12 @@ if (!empty($name)) {
             if (!$player->isHidden()) {
 
                 $main_content .= "<div class='TableContainer'>";
-                $main_content .= $make_content_header("Account Information");
+                $main_content .= '
+                <div class="community-up-section">
+                     <div class="community-up-text">
+                         Account Information
+                     </div>
+                </div>';
                 $main_content .= $make_table_header('Table3', '', TRUE);
                 //$main_content.='<TR><TD>No one died on '.htmlspecialchars($config['server']['serverName']).'.</TD></TR>';
                 //$main_content .= '<table border="0" cellspacing="1" cellpadding="4" width="100%" ><tr bgcolor="#505050"><td colspan="2" class="white" ><b>Account Information</b></td></tr>';
@@ -435,7 +440,12 @@ if (!empty($name)) {
             if (!$player->isHidden()) {
 
                 $main_content .= "<div class='TableContainer'>";
-                $main_content .= $make_content_header("Characters");
+                $main_content .= '
+                <div class="community-up-section">
+                     <div class="community-up-text">
+                         Characters
+                     </div>
+                </div>';
                 $main_content .= $make_table_header('Table3', '', TRUE);
                 //$main_content .= '<table border="0" cellspacing="1" cellpadding="4" width="100%" ><tr bgcolor="#505050"><td colspan="5" class="white"><b>Characters</b></td></tr>';
                 $main_content .= '<tr><td><strong>Name</strong></td><td><strong>World</strong></td><td><strong>Status</strong></td><td>Action</td></tr>';
@@ -459,8 +469,8 @@ if (!empty($name)) {
 										<table border="0" cellspacing="0" cellpadding="0">
 											<form action="" method="post">
                                                 <input type="hidden" name="name" value="' . htmlspecialchars($player_list->getName()) . '">
-                                                <input type="image" name="View ' . htmlspecialchars($player_list->getName()) . '" alt="View ' . htmlspecialchars($player_list->getName()) . '" src="' . $layout_name . '/images/global/buttons/sbutton_view.gif" border="0" width="120" height="18">
-											</form>
+                                                <button style="font-size:20px;margin-left:30px;">View</button>											
+                                                </form>
 										</table>
 									</td>
 								</tr>';
@@ -487,14 +497,18 @@ if (!empty($search_error)) {
 }
 
 $main_content .= "<div class='TableContainer'>";
-$main_content .= $make_content_header("Search Character");
+$main_content .= '<div class="community-up-section">
+<div class="community-up-text">
+        Search Characters
+    </div>
+</div>';
 $main_content .= $make_table_header('Table3', '', TRUE);
 $main_content .= '
 	<form action="" method="post">
 			<tr>
                 <td>Name:</td>
                 <td><input name="name" value="" size="29" maxlenght="29"></td>
-                <td><input type="image" name="Submit" src="' . $layout_name . '/images/global/buttons/sbutton_submit.gif" border="0" width="120" height="18"></td>
+                <td><button style="font-size:20px;margin-left:40px;">Search</button></td>
 			</tr>
 	</form>';
 $main_content .= $make_table_footer();

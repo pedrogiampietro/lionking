@@ -161,9 +161,9 @@ if (!$logged) {
 				
 				<label for="i-email">E-mail:</label>
 				<input id="email" name="email" class="CipAjaxInput" style="width:206px;float:left;" value="' . (isset($_POST['email']) ? htmlspecialchars(substr($_POST['email'], 0, 50)) : '') . '" size="30" maxlength="50" onBlur="SendAjaxCip({DataType: \'Container\'}, {Href: \'./ajax_email.php\',PostData: \'a_EMail=\'+encodeURIComponent(getElementById(\'email\').value),Method: \'POST\'});" />
-		
+
 				<label for="i-selected"><b>Please select the following check box:</b></label>
-				<input type="checkbox" name="agreeagreements" value="true"  onClick="if(this.checked == true) {  document.getElementById(\'agreeagreements_errormessage\').innerHTML = \'\';} else {  document.getElementById(\'agreeagreements_errormessage\').innerHTML = \'You have to agree to the ' . $config['server']['serverName'] . ' Rules in order to create an account!\';}"' . ($_POST['step'] == 'docreate' && !isset($e['rules']) ? ' checked="checked"' : '') . '/>
+				<input type="checkbox" name="agreeagreements" value="true"  onClick="if(this.checked == true) {  document.getElementById(\'agreeagreements_errormessage\').innerHTML = \'\';} else {  }"' . ($_POST['step'] == 'docreate' && !isset($e['rules']) ? ' checked="checked"' : '') . '/>
 				I agree to the <a href="?subtopic=tibiarules" target="_blank" >' . $config['server']['serverName'] . ' Rules</a>.
 				<span id="agreeagreements_errormessage" class="FormFieldError">' . (isset($e['rules']) ? $e['rules'] : '') . '</span>
 				 
@@ -185,7 +185,18 @@ if (!$logged) {
 					</form>
 			</center>
 		</form>		
-	</div>';
+    </div>
+    
+    <div class="register-account-desc">
+<p style="margin:0;"><b>Terms of Registration</b></p> <br>
+ Registering an account within our game you are accepting LionKinG <a href="?subtopic=rules">rules</a>. <br> <br>
+ The entire date belongs to <b>ArkSoft</b>, including all characters and accounts. <br>
+ In such case LionKinG staff reserves the right to delete characters and accounts due to
+ possible rule violations. <br> <br>
+ By pressing the register button, you accept the terms and <a href="?subtopic=rules">rules</a> of our server.
+</div>
+    
+    ';
         
         } else {
             $reg_account = new Account();
@@ -285,7 +296,7 @@ if (!$logged) {
 			<input id="email" name="email" class="CipAjaxInput" style="width:206px;float:left;" value="' . (isset($_POST['email']) ? htmlspecialchars(substr($_POST['email'], 0, 50)) : '') . '" size="30" maxlength="50" onBlur="SendAjaxCip({DataType: \'Container\'}, {Href: \'./ajax_email.php\',PostData: \'a_EMail=\'+encodeURIComponent(getElementById(\'email\').value),Method: \'POST\'});" />
 	
 			<label for="i-selected"><b>Please select the following check box:</b></label>
-			<input type="checkbox" name="agreeagreements" value="true"  onClick="if(this.checked == true) {  document.getElementById(\'agreeagreements_errormessage\').innerHTML = \'\';} else {  document.getElementById(\'agreeagreements_errormessage\').innerHTML = \'You have to agree to the ' . $config['server']['serverName'] . ' Rules in order to create an account!\';}"' . ($_POST['step'] == 'docreate' && !isset($e['rules']) ? ' checked="checked"' : '') . '/>
+			<input type="checkbox" name="agreeagreements" value="true"  onClick="if(this.checked == true) {  document.getElementById(\'agreeagreements_errormessage\').innerHTML = \'\';} else {  }"' . ($_POST['step'] == 'docreate' && !isset($e['rules']) ? ' checked="checked"' : '') . '/>
 			I agree to the <a href="?subtopic=tibiarules" target="_blank" >' . $config['server']['serverName'] . ' Rules</a>.
 			<span id="agreeagreements_errormessage" class="FormFieldError">' . (isset($e['rules']) ? $e['rules'] : '') . '</span>
 			 
@@ -307,6 +318,15 @@ if (!$logged) {
 				</form>
 		</center>
 	</form>		
+</div>
+
+<div class="register-account-desc">
+<p style="margin:0;"><b>Terms of Registration</b></p> <br>
+ Registering an account within our game you are accepting LionKinG <a href="?subtopic=rules">rules</a>. <br> <br>
+ The entire date belongs to <b>ArkSoft</b>, including all characters and accounts. <br>
+ In such case LionKinG staff reserves the right to delete characters and accounts due to
+ possible rule violations. <br> <br>
+ By pressing the register button, you accept the terms and <a href="?subtopic=rules">rules</a> of our server.
 </div>';
         
     }

@@ -511,7 +511,7 @@
   .slider {
       position: relative;
       width: 700px;
-      height: 300px;
+      height: 232px;
       background-color: black;
       margin-top: -5px;
       margin-left: 5px;
@@ -531,7 +531,7 @@
       position: absolute;
       top: 80%;
       width: 300px;
-      height: 60px;
+      height: 46px;
       text-align: center;
       letter-spacing: 1px;
       transition: opacity .5s ease;
@@ -2117,8 +2117,8 @@
   }
   
   .register-account-desc {
-      margin-top: 15px;
-      margin-left: 30px;
+      margin-top: -473px;
+      margin-left: 271px;
       width:360px;
       height: 480px;
       float:left;
