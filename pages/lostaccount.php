@@ -57,10 +57,10 @@ if ($config['site']['send_emails']) {
 					<INPUT TYPE=hidden NAME="step" VALUE="problem">
 					<TABLE CELLSPACING=1 CELLPADDING=4 BORDER=0 WIDTH=100%>
 						<TR>
-							<TD BGCOLOR="#505050" CLASS=white><B>Enter Character Name</B></TD>
+							<TD BGCOLOR="#4e3623" CLASS=white><B>Enter Character Name</B></TD>
 						</TR>
 						<TR>
-							<TD BGCOLOR="#D4C0A1">Character name:
+							<TD BGCOLOR="#291b1c">Character name:
 								<INPUT NAME="character" SIZE=30 MAXLENGTH=30></TD>
 						</TR>
 					</TABLE>
@@ -70,7 +70,7 @@ if ($config['site']['send_emails']) {
 						<TD ALIGN=center><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=120 HEIGHT=1 BORDER=0></TD>
 						<TD ALIGN=center><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
 							<TR>
-								<TD><INPUT TYPE=image NAME="Submit" ALT="Submit" SRC="' . $layout_name . '/images/global/buttons/sbutton_submit.gif" BORDER=0 WIDTH=120 HEIGHT=18></TD>
+								<TD><button style="font-size:20px;margin-left:40px;">Submit</button></TD>
 							</TR>
 						</FORM>
 					</TABLE>
@@ -123,10 +123,16 @@ if ($config['site']['send_emails']) {
                 $main_content .= '
 					<TABLE CELLSPACING=1 CELLPADDING=4 BORDER=0 WIDTH=100%>
 						<TR>
-							<TD BGCOLOR="#505050" CLASS=white><B>Error</B></TD>
+							<TD>
+							<div class="community-up-section">
+								<div class="community-up-text">
+									Error
+								</div>
+							</div>		
+							</TD>
 						</TR>
 						<TR>
-							<TD BGCOLOR="#D4C0A1"><TABLE>
+							<TD><TABLE>
 									<TR>
 										<TD> Character <B>' . $character . '</B> does not exist. Please make sure to enter the character name correctly. Note that characters are deleted automatically if they have not been used for a long time. </TD>
 									</TR>
@@ -139,7 +145,7 @@ if ($config['site']['send_emails']) {
 						<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
 							<FORM ACTION=?subtopic=lostaccount METHOD=post>
 								<TR>
-									<TD><INPUT TYPE=image NAME="Back" ALT="Back" SRC="' . $layout_name . '/images/global/buttons/sbutton_back.gif" BORDER=0 WIDTH=120 HEIGHT=18></TD>
+									<TD><button style="font-size:20px;margin-left:300px;">Back</button></TD>
 								</TR>
 							</FORM>
 						</TABLE>
