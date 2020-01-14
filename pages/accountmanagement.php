@@ -9,19 +9,11 @@ if (!$logged) {
         $main_content .= '
 			<div class="TableContainer" >
 				<table class="Table1" cellpadding="0" cellspacing="0" >
-					<div class="CaptionContainer" >
-						<div class="CaptionInnerContainer" >
-							<span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<div class="Text">Logout Successful</div>
-							<span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);" /></span>
-							<span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);" ></span>
-							<span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-							<span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);" /></span>
-						</div>
+				<div class="community-up-section">
+					<div class="community-up-text">
+					Logout Successful
 					</div>
+				</div>
 					<tr>
 						<td><div class="InnerTableContainer" >
 								<table style="width:100%;" >

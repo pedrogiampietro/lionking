@@ -22,17 +22,17 @@ if ($logged) {
         <div id="ProgressBar">
             <div id="MainContainer">
                 <div id="BackgroundContainer">
-                    <img id="BackgroundContainerLeftEnd" src="' . $layout_name . '/images/global/content/stonebar-left-end.gif">      
+                    <img id="BackgroundContainerLeftEnd" src="' . $layout_name . '/assets/img/content/stonebar-left-end.gif">      
                     <div id="BackgroundContainerCenter">
-                        <div id="BackgroundContainerCenterImage" style="background-image:url(' . $layout_name . '/images/global/content/stonebar-center.gif);"></div>
+                        <div id="BackgroundContainerCenterImage" style="background-image:url(' . $layout_name . '/assets/img/content/stonebar-center.gif);"></div>
                     </div>
-                    <img id="BackgroundContainerRightEnd" src="' . $layout_name . '/images/global/content/stonebar-right-end.gif">    
+                    <img id="BackgroundContainerRightEnd" src="' . $layout_name . '/assets/img/content/stonebar-right-end.gif">    
                 </div>
-                <img id="TubeLeftEnd" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-tube-left-green.gif">    
-                <img id="TubeRightEnd" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-tube-right-' . (($step >= 4) ? 'green' : 'blue') . '.gif">    
+                <img id="TubeLeftEnd" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-tube-left-green.gif">    
+                <img id="TubeRightEnd" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-tube-right-' . (($step >= 4) ? 'green' : 'blue') . '.gif">    
                 <div id="FirstStep" class="Steps">
                     <div class="SingleStepContainer">
-                        <img class="StepIcon" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-icon-1-green.gif">        
+                        <img class="StepIcon" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-icon-1-green.gif">        
                         <div class="StepText" style="font-weight:' . (($step == 1) ? 'bold' : 'normal') . ';">Select product</div>
                     </div>
                 </div>
@@ -40,26 +40,26 @@ if ($logged) {
                     <div id="StepsContainer2">
                         <div class="Steps" style="width:33%">
                             <div class="TubeContainer">            
-                                <img class="Tube" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-tube-green' . (($step == 1) ? '-blue' : '') . '.gif">
+                                <img class="Tube" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-tube-green' . (($step == 1) ? '-blue' : '') . '.gif">
                             </div>
                             <div class="SingleStepContainer">
-                                <img class="StepIcon" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-icon-2-' . (($step >= 2) ? 'green' : 'blue') . '.gif">            
+                                <img class="StepIcon" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-icon-2-' . (($step >= 2) ? 'green' : 'blue') . '.gif">            
                                 <div class="StepText" style="font-weight:' . (($step == 2) ? 'bold' : 'normal') . ';">Enter payment data</div>
                             </div>
                         </div>
                         <div class="Steps" style="width:33%">
                             <div class="TubeContainer">';
     if ($step < 2) {
-        $main_content .= '<img class="Tube" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-tube-blue.gif">';
+        $main_content .= '<img class="Tube" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-tube-blue.gif">';
     } elseif ($step == 2) {
-        $main_content .= '<img class="Tube" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-tube-green-blue.gif">';
+        $main_content .= '<img class="Tube" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-tube-green-blue.gif">';
     } else {
-        $main_content .= '<img class="Tube" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-tube-green.gif">';
+        $main_content .= '<img class="Tube" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-tube-green.gif">';
     }
     $main_content .= '
                             </div>
                             <div class="SingleStepContainer">
-                                <img class="StepIcon" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-icon-3-' . (($step >= 3) ? 'green' : 'blue') . '.gif">            
+                                <img class="StepIcon" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-icon-3-' . (($step >= 3) ? 'green' : 'blue') . '.gif">            
                                 <div class="StepText" style="font-weight:' . (($step == 3) ? 'bold' : 'normal') . ';">Confirm your order</div>
                             </div>
                         </div>
@@ -67,15 +67,15 @@ if ($logged) {
                             <div class="TubeContainer">';
     
     if ($step < 3) {
-        $main_content .= '<img class="Tube" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-tube-blue.gif">';
+        $main_content .= '<img class="Tube" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-tube-blue.gif">';
     } elseif ($step == 3) {
-        $main_content .= '<img class="Tube" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-tube-green-blue.gif">';
+        $main_content .= '<img class="Tube" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-tube-green-blue.gif">';
     } else {
-        $main_content .= '<img class="Tube" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-tube-green.gif">';
+        $main_content .= '<img class="Tube" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-tube-green.gif">';
     }
     $main_content .= '    </div>
                             <div class="SingleStepContainer">
-                                <img class="StepIcon" src="' . $layout_name . '/images/global/content/progressbar/progress-bar-icon-4-' . (($step >= 4) ? 'green' : 'blue') . '.gif">            
+                                <img class="StepIcon" src="' . $layout_name . '/assets/img/content/progressbar/progress-bar-icon-4-' . (($step >= 4) ? 'green' : 'blue') . '.gif">            
                                 <div class="StepText" style="font-weight:' . (($step >= 4) ? 'bold' : 'normal') . ';">Summary</div>
                             </div>
                         </div>
@@ -88,14 +88,14 @@ if ($logged) {
     
     if ($step == 1) {
         $main_content .= '
-    <script src="' . $layout_name . '/js/changepmctibia.js'.$css_version.'"></script>
+    <script src="' . $layout_name . '/assets/js/changepmctibia.js'.$css_version.'"></script>
     <form method="POST">
     <div class="TableContainer">
     <div class="CaptionContainer">
         <div class="CaptionInnerContainer">
-            <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>        
+            <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/assets/img/content/table-headline-border.gif);"></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-vertical.gif);"></span>        
             <div class="Text">Select product</div>
-            <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>      
+            <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-vertical.gif);"></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/assets/img/content/table-headline-border.gif);"></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>      
         </div>
     </div>
     <table class="Table5" cellpadding="0" cellspacing="0">
@@ -108,14 +108,14 @@ if ($logged) {
                                 <tr>
                                     <td>
                                         <div class="TableShadowContainerRightTop">
-                                            <div class="TableShadowRightTop" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rt.gif);"></div>
+                                            <div class="TableShadowRightTop"></div>
                                         </div>
-                                        <div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);">
+                                        <div class="TableContentAndRightShadow">
                                             <div class="TableContentContainer">
                                                 <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
                                                     <tbody>
                                                         <tr>
-                                                            <td class="LabelV150"><span>Country:</span></td>
+                                                            <td><span>Country:</span></td>
                                                             <td>
                                                                 <select name="CountryCode" class="Width100Percent" onchange="this.form.submit();" onblur="CheckForReload(this)">
                                                                     <option value="">--- please select your country ---</option>
@@ -124,10 +124,10 @@ if ($logged) {
                                                                 <input type="hidden" id="CC_ServiceID" name="InitialServiceID" value="1">
                                                                 <input type="hidden" name="CountrySubmitted" value="1">
                                                                 <div id="SelectCountrySubmitButton" style="float: right; display: none;">                                                                    
-                                                                    <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)">
+                                                                    <div class="BigButton" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton.gif)">
                                                                         <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
-                                                                            <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);"></div>
-                                                                            <input class="ButtonText" type="image" name="Change Country" alt="Change Country" src="' . $layout_name . '/images/global/buttons/_sbutton_changecountry.gif">
+                                                                            <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton_over.gif);"></div>
+                                                                            <input class="ButtonText" type="image" name="Change Country" alt="Change Country" src="' . $layout_name . '/assets/img/buttons/_sbutton_changecountry.gif">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -138,9 +138,9 @@ if ($logged) {
                                             </div>
                                         </div>
                                         <div class="TableShadowContainer">
-                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);">
-                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);"></div>
-                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif);"></div>
+                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bm.gif);">
+                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bl.gif);"></div>
+                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-br.gif);"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -151,7 +151,6 @@ if ($logged) {
                                             <div class="InnerTableTab ActiveInnerTableTab">
                                                 <div id="ProductCategoryHelperDiv_13" class="ProductCategoryHelperDiv"></div>
                                                 <a>
-                                                    <img src="' . $layout_name . '/images/payment/products_tab_active.png">
                                                     <div class="InnerTableTabLabel">'.$config['sale']['productName'].'</div>
                                                 </a>
                                             </div>
@@ -162,9 +161,9 @@ if ($logged) {
                                 <tr>
                                     <td>
                                         <div class="TableShadowContainerRightTop">
-                                            <div class="TableShadowRightTop" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rt.gif);"></div>
+                                            <div class="TableShadowRightTop"></div>
                                         </div>
-                                        <div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);">
+                                        <div class="TableContentAndRightShadow">
                                             <div class="TableContentContainer">
                                                 <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
                                                     <tbody>
@@ -188,22 +187,22 @@ if ($logged) {
                     }
                     $main_content .= $promoxaum;
                 }
-                $main_content .= '                                      <div class="ServiceID_Icon_Container_Background" id="" style="background-image:url(' . $layout_name . '/images/payment/serviceid_icon_normal.png);">';
+                $main_content .= '                                      <div class="ServiceID_Icon_Container_Background" id="" style="background-image:url(' . $layout_name . '/assets/img/payment/serviceid_icon_normal.png);">';
                 $realcoin = ($reais/$coins)/100;
                 if($config['donate']['show_proporcao']){
                     if($realcoin != $config['donate']['proporcao'] && $realcoin > 0){
                         $percent = (100-(($realcoin*100)/$config['donate']['proporcao']));
-                        $main_content .= '                                        <img src="./layouts/tibiacom/images/payment/ribbon-'.$percent.'percent-off.png" style=" position: absolute; left: 0px; top: 0px;"/>';
+                        $main_content .= '                                        <img src="./layouts/tibiacom/assets/img/payment/ribbon-'.$percent.'percent-off.png" style=" position: absolute; left: 0px; top: 0px;"/>';
                     }
                 }
                 $main_content .= '
                                                                             <div class="ServiceID_Icon" id="ServiceID_Icon_' . $id . '" style="" onclick="ChangeService(' . $id . ', 13);" onmouseover="MouseOverServiceID(' . $id . ', 13);" onmouseout="MouseOutServiceID(' . $id . ', 13);">
                                                                                 <div class="PermanentDeactivated ServiceID_Deactivated_ByChoice" id="ServiceID_NotAllowed_' . $id . '" style="display: none;">
                                                                                     <span class="HelperDivIndicator" onmouseover="ActivateHelperDiv($(this), \'Service Info:\', \'<p>The product is not available for the selected payment method!</p>\', \'\');" onmouseout="$(\'#HelperDivContainer\').hide();">
-                                                                                        <div class="ServiceID_Deactivated" style="background-image: url(' . $layout_name . '/images/payment/serviceid_deactivated.png);"></div>
+                                                                                        <div class="ServiceID_Deactivated" style="background-image: url(' . $layout_name . '/assets/img/payment/serviceid_deactivated.png);"></div>
                                                                                     </span>
                                                                                 </div>
-                                                                                <div class="ServiceID_Icon_New" id="ServiceID_Icon_New_' . $id . '" style="background-image:url(' . $layout_name . '/images/payment/serviceid_' . ($countOffers >= 5 ? '5' : $countOffers) . '.png);"></div>
+                                                                                <div class="ServiceID_Icon_New" id="ServiceID_Icon_New_' . $id . '" style="background-image:url(' . $layout_name . '/assets/img/payment/serviceid_' . ($countOffers >= 5 ? '5' : $countOffers) . '.png);"></div>
                                                                                 <div class="ServiceID_Icon_Selected" id="ServiceID_Icon_Selected_' . $id . '"></div>
                                                                                 <div class="ServiceID_Icon_Over" id="ServiceID_Icon_Over_' . $id . '" style=""></div>
                                                                                 <label for="ServiceID_' . $id . '">
@@ -243,9 +242,9 @@ if ($logged) {
                                             </div>
                                         </div>
                                         <div class="TableShadowContainer">
-                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);">
-                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);"></div>
-                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif);"></div>
+                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bm.gif);">
+                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bl.gif);"></div>
+                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-br.gif);"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -253,9 +252,9 @@ if ($logged) {
                                 <tr>
                                     <td>
                                         <div class="TableShadowContainerRightTop">
-                                            <div class="TableShadowRightTop" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rt.gif);"></div>
+                                            <div class="TableShadowRightTop"></div>
                                         </div>
-                                        <div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);">
+                                        <div class="TableContentAndRightShadow">
                                             <div class="TableContentContainer">
                                                 <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
                                                     <tbody>
@@ -282,15 +281,15 @@ if ($logged) {
             }
             $main_content .= '
                                                                     <div class="PMCID_Icon_Container" id="PMCID_Icon_Container_' . $payment_id . '">
-                                                                        <div class="PMCID_Icon" id="PMCID_Icon_' . $payment_id . '" style="background-image:url(' . $layout_name . '/images//payment/pmcid_icon_normal.png);" onclick="ChangePMC(' . $payment_id . ');" onmouseover="MouseOverPMCID(' . $payment_id . ');" onmouseout="MouseOutPMCID(' . $payment_id . ');">
+                                                                        <div class="PMCID_Icon" id="PMCID_Icon_' . $payment_id . '" style="background-image:url(' . $layout_name . '/assets/img/payment/pmcid_icon_normal.png);" onclick="ChangePMC(' . $payment_id . ');" onmouseover="MouseOverPMCID(' . $payment_id . ');" onmouseout="MouseOutPMCID(' . $payment_id . ');">
                                                                             <div class="PermanentDeactivated PMCID_Deactivated_ByChoice" id="PMCID_NotAllowed_' . $payment_id . '" style="display: none;">
                                                                                 <span class="HelperDivIndicator" onmouseover="ActivateHelperDiv($(this), \'Payment Method Info:\', \'<p>The payment method is not allowed for the selected service!</p>\', \'\');" onmouseout="$(\'#HelperDivContainer\').hide();">
-                                                                                    <div class="PMCID_Deactivated" style="background-image: url(' . $layout_name . '/images/payment/pmcid_deactivated.png);"></div>
+                                                                                    <div class="PMCID_Deactivated" style="background-image: url(' . $layout_name . '/assets/img/payment/pmcid_deactivated.png);"></div>
                                                                                 </span>
                                                                             </div>
                                                                             <div class="PMCID_Icon_Selected" id="PMCID_Icon_Selected_' . $payment_id . '"></div>
                                                                             <div class="PMCID_Icon_Over" id="PMCID_Icon_Over_' . $payment_id . '"></div>
-                                                                            <span style="position: absolute; left: 125px; top: 53px; z-index: 99;"><span style="margin-left: 5px; position: absolute; margin-top: 2px;"><a href="../common/help.php?subtopic=Field_PaymentMethodCategory_Option_' . $payment_id . '_Comment" target="_blank"><span class="HelperDivIndicator" onmouseover="ActivateHelperDiv($(this), \'Information:\', \'This method is ' . ($showName == '' ? ucfirst($methodName) : ucfirst($showName)) . '.\', \'\');" onmouseout="$(\'#HelperDivContainer\').hide();"><img style="border:0px;" src="' . $layout_name . '/images/global/content/info.gif"></span></a></span></span>    <img class="PMCID_CP_Icon" src="' . $layout_name . '/images/payment/' . strtolower($methodName) . '.gif">
+                                                                            <span style="position: absolute; left: 125px; top: 53px; z-index: 99;"><span style="margin-left: 5px; position: absolute; margin-top: 2px;"><a href="../common/help.php?subtopic=Field_PaymentMethodCategory_Option_' . $payment_id . '_Comment" target="_blank"><span class="HelperDivIndicator" onmouseover="ActivateHelperDiv($(this), \'Information:\', \'This method is ' . ($showName == '' ? ucfirst($methodName) : ucfirst($showName)) . '.\', \'\');" onmouseout="$(\'#HelperDivContainer\').hide();"><img style="border:0px;" src="' . $layout_name . '/assets/img/content/info.gif"></span></a></span></span>    <img class="PMCID_CP_Icon" src="' . $layout_name . '/assets/img/payment/' . strtolower($methodName) . '.gif">
                                                                             <div class="PMCID_CP_Label">
                                                                             <input type="radio" id="PMCID_' . $payment_id . '" name="PMCID" value="' . $payment_id . '" style="display: none;">                                                                            
                                                                             <label for="PMCID_' . $payment_id . '">' . ($showName == '' ? ucfirst($methodName) : ucfirst($showName)) . '</label>
@@ -312,9 +311,9 @@ if ($logged) {
                                             </div>
                                         </div>
                                         <div class="TableShadowContainer">
-                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);">
-                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);"></div>
-                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif);"></div>
+                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bm.gif);">
+                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bl.gif);"></div>
+                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-br.gif);"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -334,20 +333,20 @@ if ($logged) {
         <input type="hidden" name="CountryCode" value="BR">
         <input type="hidden" name="Submitted" value="1">
         <input type="hidden" name="source" value="">
-        <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_green.gif)">
+        <div class="BigButton" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton_green.gif)">
             <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
-                <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_green_over.gif);"></div>
-                <input class="ButtonText" type="image" name="Next" alt="Next" src="' . $layout_name . '/images/global/buttons/_sbutton_next.gif">
+                <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton_green_over.gif);"></div>
+                <button style="font-size:20px;margin-left:40px;">Next</button>
             </div>
         </div>
     </div>
     <div class="RightButton">
         <form action="./?subtopic=accountmanagement" method="post" style="padding:0px;margin:0px;">
             <input type="hidden" name="page" value="">
-            <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red.gif)">
+            <div class="BigButton" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton_red.gif)">
                 <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
-                    <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_red_over.gif);"></div>
-                    <input class="ButtonText" type="image" name="Cancel" alt="Cancel" src="' . $layout_name . '/images/global/buttons/_sbutton_cancel.gif">
+                    <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton_red_over.gif);"></div>
+                    <button style="font-size:20px;margin-left:40px;">Back</button>
                 </div>
             </div>
         </form>
@@ -389,9 +388,9 @@ if ($logged) {
 <div class="TableContainer">
     <div class="CaptionContainer">
         <div class="CaptionInnerContainer">
-            <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>        
+            <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/assets/img/content/table-headline-border.gif);"></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-vertical.gif);"></span>        
             <div class="Text">Enter payment data</div>
-            <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>      
+            <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-vertical.gif);"></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/assets/img/content/table-headline-border.gif);"></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>      
         </div>
     </div>
     <table class="Table5" cellpadding="0" cellspacing="0">
@@ -404,9 +403,9 @@ if ($logged) {
                                 <tr>
                                     <td>
                                         <div class="TableShadowContainerRightTop">
-                                            <div class="TableShadowRightTop" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rt.gif);"></div>
+                                            <div class="TableShadowRightTop"></div>
                                         </div>
-                                        <div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);">
+                                        <div class="TableContentAndRightShadow">
                                             <div class="TableContentContainer">
                                                 <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
                                                     <form method="post" action="">
@@ -429,14 +428,14 @@ if ($logged) {
                                                         <tr>
                                                             <td style="vertical-align: middle;" class="LabelV200 ">Country:</td>
                                                             <td><input type="text" name="Form_OrderServiceStep3[Country]" value="BR" disabled="disabled"><input type="hidden" name="Form_OrderServiceStep3[Country]" value="BR">
-                                                                <span style="margin-left: 5px; position: absolute; margin-top: 2px;"><a href="../common/help.php?subtopic=Field_Country_Comment" target="_blank"><span class="HelperDivIndicator" onmouseover="ActivateHelperDiv($(this), \'Information:\', \'Go back to step 1 if you want to change it.\', \'\');" onmouseout="$(\'#HelperDivContainer\').hide();"><img style="border:0px;" src="' . $layout_name . '/images/global/content/info.gif"></span></a></span>
+                                                                <span style="margin-left: 5px; position: absolute; margin-top: 2px;"><a href="../common/help.php?subtopic=Field_Country_Comment" target="_blank"><span class="HelperDivIndicator" onmouseover="ActivateHelperDiv($(this), \'Information:\', \'Go back to step 1 if you want to change it.\', \'\');" onmouseout="$(\'#HelperDivContainer\').hide();"><img style="border:0px;" src="' . $layout_name . '/assets/img/content/info.gif"></span></a></span>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td style="vertical-align: middle;" class="LabelV200 ">E-Mail Address:</td>
                                                             <td>
                                                                 <input type="text" name="Form_OrderServiceStep3[EMailAddress]" value="' . ($payment_data["storage_OrderServiceData"]["EMailAddress"] ? $payment_data["storage_OrderServiceData"]["EMailAddress"] : htmlspecialchars($account_logged->getEmail())) . '">
-                                                                <span style="margin-left: 5px; position: absolute; margin-top: 2px;"><a href="../common/help.php?subtopic=Field_EMailAddress_Comment" target="_blank"><span class="HelperDivIndicator" onmouseover="ActivateHelperDiv($(this), \'Information:\', \'Used to send you the invoice and status updates on the payment process.\', \'\');" onmouseout="$(\'#HelperDivContainer\').hide();"><img style="border:0px;" src="' . $layout_name . '/images/global/content/info.gif"></span></a></span>    
+                                                                <span style="margin-left: 5px; position: absolute; margin-top: 2px;"><a href="../common/help.php?subtopic=Field_EMailAddress_Comment" target="_blank"><span class="HelperDivIndicator" onmouseover="ActivateHelperDiv($(this), \'Information:\', \'Used to send you the invoice and status updates on the payment process.\', \'\');" onmouseout="$(\'#HelperDivContainer\').hide();"><img style="border:0px;" src="' . $layout_name . '/assets/img/content/info.gif"></span></a></span>    
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -444,9 +443,9 @@ if ($logged) {
                                             </div>
                                         </div>
                                         <div class="TableShadowContainer">
-                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);">
-                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);"></div>
-                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif);"></div>
+                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bm.gif);">
+                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bl.gif);"></div>
+                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-br.gif);"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -465,10 +464,10 @@ if ($logged) {
         <input type="hidden" name="step" value="3">
         <input type="hidden" name="ServiceID" value="' . $payment_data["ServiceID"] . '">
         <input type="hidden" name="source" value="">
-        <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_green.gif)">
+        <div class="BigButton" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton_green.gif)">
             <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
-                <div class="BigButtonOver" style="background-image: url(' . $layout_name . '/images/global/buttons/sbutton_green_over.gif&quot;); visibility: hidden;"></div>
-                <input class="ButtonText" type="image" name="Next" alt="Next" src="' . $layout_name . '/images/global/buttons/_sbutton_next.gif">
+                <div class="BigButtonOver" style="background-image: url(' . $layout_name . '/assets/img/buttons/sbutton_green_over.gif&quot;); visibility: hidden;"></div>
+                <button style="font-size:20px;margin-left:40px;">Next</button>
             </div>
         </div>
     </div>
@@ -491,10 +490,10 @@ if ($logged) {
             <input type="hidden" name="Coins" value="' . $payment_data["coins"] . '">            
             <input type="hidden" name="PMCID" value="' . $payment_data["PMCID"] . '">
             <input type="hidden" name="source" value="">
-            <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)">
+            <div class="BigButton" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton.gif)">
                 <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
-                    <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);"></div>
-                    <input class="ButtonText" type="image" name="Previous" alt="Previous" src="' . $layout_name . '/images/global/buttons/_sbutton_previous.gif">
+                    <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton_over.gif);"></div>
+                    <button style="font-size:20px;margin-left:40px;">Previous</button>
                 </div>
             </div>
         </form>
@@ -509,9 +508,9 @@ if ($logged) {
 <div class="TableContainer">
     <div class="CaptionContainer">
         <div class="CaptionInnerContainer">
-            <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>        
+            <span class="CaptionEdgeLeftTop" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightTop" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>        <span class="CaptionBorderTop" style="background-image:url(' . $layout_name . '/assets/img/content/table-headline-border.gif);"></span>        <span class="CaptionVerticalLeft" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-vertical.gif);"></span>        
             <div class="Text">Confirm your order</div>
-            <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-vertical.gif);"></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/images/global/content/table-headline-border.gif);"></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/images/global/content/box-frame-edge.gif);"></span>      
+            <span class="CaptionVerticalRight" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-vertical.gif);"></span>        <span class="CaptionBorderBottom" style="background-image:url(' . $layout_name . '/assets/img/content/table-headline-border.gif);"></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(' . $layout_name . '/assets/img/content/box-frame-edge.gif);"></span>      
         </div>
     </div>
     <table class="Table5" cellpadding="0" cellspacing="0">
@@ -524,9 +523,9 @@ if ($logged) {
                                 <tr>
                                     <td>
                                         <div class="TableShadowContainerRightTop">
-                                            <div class="TableShadowRightTop" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rt.gif);"></div>
+                                            <div class="TableShadowRightTop"></div>
                                         </div>
-                                        <div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);">
+                                        <div class="TableContentAndRightShadow">
                                             <div class="TableContentContainer">
                                                 <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
                                                     <tbody>
@@ -543,9 +542,9 @@ if ($logged) {
                                             </div>
                                         </div>
                                         <div class="TableShadowContainer">
-                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);">
-                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);"></div>
-                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif);"></div>
+                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bm.gif);">
+                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bl.gif);"></div>
+                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-br.gif);"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -553,9 +552,9 @@ if ($logged) {
                                 <tr>
                                     <td>
                                         <div class="TableShadowContainerRightTop">
-                                            <div class="TableShadowRightTop" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rt.gif);"></div>
+                                            <div class="TableShadowRightTop"></div>
                                         </div>
-                                        <div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);">
+                                        <div class="TableContentAndRightShadow">
                                             <div class="TableContentContainer">
                                                 <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
                                                     <tbody>
@@ -576,9 +575,9 @@ if ($logged) {
                                             </div>
                                         </div>
                                         <div class="TableShadowContainer">
-                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);">
-                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);"></div>
-                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif);"></div>
+                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bm.gif);">
+                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bl.gif);"></div>
+                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-br.gif);"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -586,9 +585,9 @@ if ($logged) {
                                 <tr>
                                     <td>
                                         <div class="TableShadowContainerRightTop">
-                                            <div class="TableShadowRightTop" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rt.gif);"></div>
+                                            <div class="TableShadowRightTop"></div>
                                         </div>
-                                        <div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);">
+                                        <div class="TableContentAndRightShadow">
                                             <div class="TableContentContainer">
                                                 <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
                                                     <form method="post" action="">
@@ -606,9 +605,9 @@ if ($logged) {
                                             </div>
                                         </div>
                                         <div class="TableShadowContainer">
-                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);">
-                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);"></div>
-                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif);"></div>
+                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bm.gif);">
+                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bl.gif);"></div>
+                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-br.gif);"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -638,10 +637,10 @@ if ($logged) {
         <input type="hidden" name="ServiceCategoryID" value="' . $payment_data["storage_OrderServiceData"]["ServiceCategoryID"] . '">
         <input type="hidden" name="ServiceID" value="' . $payment_data["storage_OrderServiceData"]["ServiceID"] . '">
         <input type="hidden" name="step" value="' . ($payment_data["step"] + 1) . '">
-        <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_green.gif)">
+        <div class="BigButton" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton_green.gif)">
             <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
-                <div class="BigButtonOver" style="background-image: url(&quot;' . $layout_name . '/images/global/buttons/sbutton_green_over.gif&quot;); visibility: hidden;"></div>
-                <input class="ButtonText" type="image" name="BuyNow" alt="BuyNow" src="' . $layout_name . '/images/global/buttons/_sbutton_buynow.gif">
+                <div class="BigButtonOver" style="background-image: url(&quot;' . $layout_name . '/assets/img/buttons/sbutton_green_over.gif&quot;); visibility: hidden;"></div>
+                <button style="font-size:20px;margin-left:40px;">Buy Now</button>
             </div>
         </div>
     </div>
@@ -668,10 +667,10 @@ if ($logged) {
             <input type="hidden" name="PMCID" value="' . $payment_data["storage_OrderServiceData"]["PaymentMethodCategoryID"] . '">
             <input type="hidden" name="source" value="">
             <input type="hidden" name="step" value="' . ($payment_data["step"] - 1) . '">
-            <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)">
+            <div class="BigButton" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton.gif)">
                 <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
-                    <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);"></div>
-                    <input class="ButtonText" type="image" name="Previous" alt="Previous" src="' . $layout_name . '/images/global/buttons/_sbutton_previous.gif">
+                    <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/assets/img/buttons/sbutton_over.gif);"></div>
+                    <button style="font-size:20px;margin-left:40px;">Previous</button>
                 </div>
             </div>
         </form>
@@ -701,9 +700,9 @@ if ($logged) {
                                 <tr>
                                     <td>
                                         <div class="TableShadowContainerRightTop">
-                                            <div class="TableShadowRightTop" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rt.gif);"></div>
+                                            <div class="TableShadowRightTop"></div>
                                         </div>
-                                        <div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);">
+                                        <div class="TableContentAndRightShadow">
                                             <div class="TableContentContainer">
                                                 <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
                                                     <tbody>
@@ -720,9 +719,9 @@ if ($logged) {
                                             </div>
                                         </div>
                                         <div class="TableShadowContainer">
-                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);">
-                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);"></div>
-                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif);"></div>
+                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bm.gif);">
+                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bl.gif);"></div>
+                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-br.gif);"></div>
                                             </div>
                                         </div>
                                     </td>
@@ -730,9 +729,9 @@ if ($logged) {
                                 <tr>
                                     <td>
                                         <div class="TableShadowContainerRightTop">
-                                            <div class="TableShadowRightTop" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rt.gif);"></div>
+                                            <div class="TableShadowRightTop"></div>
                                         </div>
-                                        <div class="TableContentAndRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-rm.gif);">
+                                        <div class="TableContentAndRightShadow">
                                             <div class="TableContentContainer">
                                                 <table class="TableContent" width="100%" style="border:1px solid #faf0d7;">
                                                     <tbody>
@@ -749,9 +748,9 @@ if ($logged) {
                                             </div>
                                         </div>
                                         <div class="TableShadowContainer">
-                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bm.gif);">
-                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-bl.gif);"></div>
-                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/images/global/content/table-shadow-br.gif);"></div>
+                                            <div class="TableBottomShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bm.gif);">
+                                                <div class="TableBottomLeftShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-bl.gif);"></div>
+                                                <div class="TableBottomRightShadow" style="background-image:url(' . $layout_name . '/assets/img/content/table-shadow-br.gif);"></div>
                                             </div>
                                         </div>
                                     </td>

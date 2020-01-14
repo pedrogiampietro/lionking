@@ -98,7 +98,7 @@ $make_button = function ($position) use ($layout_name) {
                     <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)">
                         <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
                             <div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);"></div>
-                            <input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif">
+                            <button style="font-size:20px;margin-left:40px;">Back</button>
                         </div>
                     </div>
                 </form>

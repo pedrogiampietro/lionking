@@ -39,7 +39,7 @@ if ($config['pagseguro']['lightbox'] == TRUE) {
                 <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_green.gif)">
                     <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
                         <div class="BigButtonOver" style="background-image: url(&quot;' . $layout_name . '/images/global/buttons/sbutton_green_over.gif&quot;); visibility: hidden;"></div>
-                        <input class="ButtonText" onclick="enviaPagseguro()" type="image" name="Next" alt="Next" src="' . $layout_name . '/images/global/buttons/_sbutton_next.gif">
+                        <button style="font-size:20px;margin-left:40px;" onclick="enviaPagseguro()" >Next</button>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ if ($config['pagseguro']['lightbox'] == TRUE) {
             <div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_green.gif)">
                 <div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);">
                     <div class="BigButtonOver" style="background-image: url(&quot;' . $layout_name . '/images/global/buttons/sbutton_green_over.gif&quot;); visibility: hidden;"></div>
-                    <input class="ButtonText" type="image" name="Next" alt="Next" src="' . $layout_name . '/images/global/buttons/_sbutton_next.gif">
+                    <button style="font-size:20px;margin-left:40px;">Next</button>
                 </div>
             </div>
         </form>

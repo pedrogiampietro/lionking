@@ -47,7 +47,7 @@ if (count($getDonate[0]) == 0) {
 									<tr>
 										<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 												<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-													<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+													<button style="font-size:20px;margin-left:40px;">Back</button>
 												</div>
 											</div>
 										</td>
@@ -111,7 +111,7 @@ if (count($getDonate[0]) == 0) {
 											<tr>
 												<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 														<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-															<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+															<button style="font-size:20px;margin-left:40px;">Back</button>
 														</div>
 													</div>
 												</td>
@@ -191,7 +191,7 @@ if (count($getDonate[0]) == 0) {
 												<tr>
 													<td style="border:0px;" ><div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 															<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-																<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+																<button style="font-size:20px;margin-left:40px;">Back</button>
 															</div>
 														</div>
 													</td>
@@ -281,7 +281,7 @@ if (count($getDonate[0]) == 0) {
 						<form method="post" action="?subtopic=accountmanagement&action=manage" >
 							<div class="BigButton" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton.gif)" >
 								<div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(' . $layout_name . '/images/global/buttons/sbutton_over.gif);" ></div>
-									<input class="ButtonText" type="image" name="Back" alt="Back" src="' . $layout_name . '/images/global/buttons/_sbutton_back.gif" >
+									<button style="font-size:20px;margin-left:40px;">Back</button>
 								</div>
 							</div>
 						</form>

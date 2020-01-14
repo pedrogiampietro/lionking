@@ -82,6 +82,23 @@ if (!defined('INITIALIZED'))
             a_configuration_option: 400
         });
 </script>
+ <script>
+        var loginStatus=0;
+        loginStatus='<?php if($logged){ ?>true<?php } else { ?>false<?php } ?>';
+        <?php if ($_REQUEST['subtopic'] == 'accountmanagement' && $_REQUEST['action'] == 'donate'){?>
+        var activeSubmenuItem='donate';
+        <?php }else{?>
+        var activeSubmenuItem='<?php echo $subtopic; ?>';
+        <?php }?>
+        var JS_DIR_IMAGES=0;
+        JS_DIR_IMAGES='<?php echo $layout_name; ?>/assets/img/';
+        var JS_DIR_ACCOUNT=0;
+        JS_DIR_ACCOUNT='';
+        var g_FormName='';
+        var g_FormField='';
+        var g_Deactivated=false;
+        var g_FlashClientInPopUp= true;
+    </script>
 
 
         <meta name="viewport" content="width=device-width, initial-scale=1">

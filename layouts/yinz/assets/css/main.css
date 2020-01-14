@@ -388,9 +388,467 @@
     cursor: help !important; }
   
     /* end forum post */
+
+    /** ----------------
+ *  new process bars
+ *  ----------------
+ */
+#ProgressBar #Headline {
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 5px; }
+  
+  #ProgressBar #MainContainer {
+    position: relative;
+    top: 10px;
+    height: 50px;
+    margin-bottom: 25px; }
+  
+  #ProgressBar #BackgroundContainer {
+    position: relative;
+    width: 100%; }
+  
+  #ProgressBar #BackgroundContainerLeftEnd {
+    position: absolute;
+    float: left; }
+  
+  #ProgressBar #BackgroundContainerCenter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 17px;
+    width: 100%; }
+  
+  #ProgressBar #BackgroundContainerCenterImage {
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+    height: 17px; }
+  
+  #ProgressBar #BackgroundContainerRightEnd {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right; }
+  
+  #ProgressBar #TubeLeftEnd {
+    position: absolute;
+    left: 25px;
+    top: 4px; }
+  
+  #ProgressBar #TubeRightEnd {
+    position: absolute;
+    right: 25px;
+    top: 4px;
+    z-index: 0; }
+  
+  #ProgressBar .Steps {
+    position: relative;
+    height: 39px;
+    font-size: 9px;
+    float: left;
+    top: -11px;
+    margin-left: -1px; }
+  
+  #ProgressBar #StepsContainer1 {
+    text-align: right;
+    margin-left: 92px;
+    margin-right: 40px;
+    height: 10px; }
+  
+  #ProgressBar #StepsContainer2 {
+    width: 100%;
+    height: 10px; }
+  
+  #ProgressBar .TubeContainer {
+    position: relative;
+    padding-right: 47px; }
+  
+  #ProgressBar .Tube {
+    position: relative;
+    top: 16px;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: #FFFFFF none repeat scroll 0; }
+  
+  * html #ProgressBar .Tube {
+    top: 13px; }
+  
+  #ProgressBar .SingleStepContainer {
+    position: absolute;
+    top: 0;
+    width: 47px;
+    height: 30px;
+    right: 0;
+    text-align: center; }
+  
+  #ProgressBar #FirstStep .SingleStepContainer {
+    left: 45px;
+    width: 47px;
+    position: absolute; }
+  
+  #ProgressBar .StepIcon {
+    position: absolute;
+    right: 0; }
+  
+  * html #ProgressBar .StepIcon {
+    right: -1px; }
+  
+  #ProgressBar #FirstStep .StepIcon {
+    top: 0;
+    left: 0; }
+  
+  #ProgressBar .StepText {
+    top: 40px;
+    position: absolute;
+    width: 200px;
+    right: -77px; }
+
+    /* fim progressbar */
+
+    /* payment system */
+
+.GameCode {
+    text-transform: uppercase;
+    width: 60px;
+  }
+  
+  .Saving {
+    background-color: blue;
+    color: white;
+    padding: 1px 8px;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+  
+  #LastSaving {
+    background-color: red;
+  }
+  
+  .BGRed {
+    background-color: #EF0000;
+  }
+  
+  .BGOrange {
+    background-color: #FF9712;
+  }
+  
+  .BGGreen {
+    background-color: #00BF00;
+  }
+  
+  .Content .BoxContent .Disabled td {
+    color: grey;
+  }
+  
+  .PlaySpanContainer {
+    position: relative;
+    text-align: center;
+  }
+  
+  .ServiceID_Icon_Container {
+    position: relative;
+    width: 156px;
+    height: 156px;
+    float: left;
+    margin: 3px;
+  }
+  
+  .ServiceID_Icon_Container:hover {
+    opacity: 0.95;
+  }
+  
+  .ServiceID_Icon_Container_Background {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 3px;
+    left: 3px;
+  }
+  
+  .ServiceID_Icon_Container label {
+    font-size: 8pt;
+  }
+  
+  .ServiceID_Icon {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    background-repeat: no-repeat;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .ServiceID_Icon_New {
+    position: absolute;
+    left: 10px;
+    top: 48px;
+    height: 64px;
+    width: 128px;
+  }
+  
+  .ServiceID_Icon .ServiceID_Deactivated {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    z-index: 99;
+  }
+  
+  .ServiceID_Icon .ServiceID_Icon_Selected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    z-index: 98;
+  }
+  
+  .ServiceID_Icon .ServiceIDLabelContainer {
+    position: absolute;
+    left: 0;
+    display: table;
+    top: 6px;
+    height: 35px;
+    width: 130px;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 99;
+  }
+  
+  .ServiceID_Icon .ServiceIDLabel {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .ServiceIDLabel input {
+    display: none;
+  }
+  
+  .ServiceID_Icon .ServiceIDPriceContainer {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 140px;
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index: 99;
+  }
+  
+  .ServiceID_Icon .ServiceIDSpecialOffer {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    z-index: 100;
+  }
+  
+  .ServiceID_Icon .ServiceID_Icon_Over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    z-index: 97;
+  }
+  
+  .ServiceID_Icon .ServiceID_HelperDiv {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    z-index: 399;
+  }
+  
+  .ServiceID_Icon .RibbonNewProduct {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    height: 58px;
+    width: 58px;
+    z-index: 199;
+  }
+  
+  .ServiceID_Icon .RibbonLastChance {
+    position: absolute;
+    top: -4px;
+    left: 96px;
+    height: 58px;
+    width: 58px;
+    z-index: 199;
+  }
+  
+  .ServiceID_Icon .ServiceID_Icon_Animation_1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    display: none;
+    z-index: 95;
+  }
+  
+  .ServiceID_Icon .ServiceID_Icon_New_Animation_1 {
+    position: absolute;
+    top: 48px;
+    right: 12px;
+    width: 128px;
+    height: 64px;
+    display: none;
+    z-index: 95;
+  }
+  
+  .PMCID_Icon_Container {
+    position: relative;
+    width: 156px;
+    height: 106px;
+    float: left;
+    margin: 3px;
+  }
+  
+  .PMCID_Icon_Container label {
+    font-size: 8pt;
+  }
+  
+  .PMCID_Icon {
+    position: relative;
+    float: left;
+    top: 3px;
+    left: 3px;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    background-repeat: no-repeat;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .PMCID_Icon .PMCID_CP_Icon {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+  }
+  
+  .PMCID_Icon .PMCID_CP_Label {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 17px;
+    z-index: 99;
+  }
+  
+  .PMCID_CP_Label input {
+    display: none;
+  }
+  
+  .PMCID_Icon .PMCID_Icon_Selected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100px;
+    z-index: 98;
+  }
+  
+  .PMCID_Icon .PMCID_Deactivated {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100px;
+    z-index: 99;
+  }
+  
+  .PMCID_Icon .PMCID_Icon_Over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100px;
+  }
+  
+  .PermanentDeactivated {
+    position: absolute;
+    left: 0;
+    z-index: 400;
+  }
+  
+  .PermanentDeactivated .PMCID_Deactivated {
+    position: relative;
+    left: 0;
+    width: 150px;
+  }
+  
+  .PermanentDeactivated .ServiceID_Deactivated {
+    position: relative;
+    left: 0;
+    width: 150px;
+  }
+  
+  /* button row */
+  .SubmitButtonRow {
+    position: relative;
+    height: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .SubmitButtonRow .LeftButton {
+    float: left;
+    margin-left: 50px;
+  }
+  
+  .SubmitButtonRow .CenterButton {
+    margin-left: auto;
+    margin-right: auto;
+    width: 135px;
+  }
+  
+  .SubmitButtonRow .RightButton {
+    float: right;
+    margin-right: 50px;
+  }
+  
+  /* purchased items detail view and assign process */
+  .PurchasedItemContainer {
+    position: relative;
+    float: right;
+    overflow: hidden;
+    height: 70px;
+    width: 130px;
+    border: 1px solid #7b6e4c;
+    margin-left: 10px;
+  }
+  
+  .PurchasedItemImage {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: -47px;
+    left: -7px;
+  }
+  
+  .PurchasedItemImageNew {
+    position: absolute;
+    height: 64px;
+    width: 128px;
+    top: 0;
+    left: 0;
+  }
+    
+    /* fim payment */
   
 
-/* layout index */
+    /* layout index */
+
 .frame-box {
     position: relative;
     background: #d8b46c repeat top;
