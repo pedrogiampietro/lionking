@@ -302,9 +302,9 @@ if ($action == 'show_board') {
     $main_content .= $make_table_header("Table5", "right");
     $main_content .= '
 		<TR>
-			<TD><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
+			<TD><IMG SRC="' . $layout_name . '/assets/img/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
 			<TD WIDTH=100% ALIGN=right><a href="?subtopic=forum" >Community Boards</a> | <b>' . $sections[$section_id] . '</b></TD>
-			<TD><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
+			<TD><IMG SRC="' . $layout_name . '/assets/img/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
 		</TR>
 	';
     $main_content .= $make_table_footer();
@@ -330,10 +330,10 @@ if ($action == 'show_board') {
         $main_content .= '
 				<tr>
 					<td  colspan=1 align="center" width=22 >
-						<b><img src="' . $layout_name . '/images/global/general/blank.gif" width=16 height=16 border=0></b>
+						<b><img src="' . $layout_name . '/assets/img/general/blank.gif" width=16 height=16 border=0></b>
 					</td>
 					<td  colspan=1 align="center" width=22 >
-						<b><img src="' . $layout_name . '/images/global/general/blank.gif" width=16 height=16 border=0></b>
+						<b><img src="' . $layout_name . '/assets/img/general/blank.gif" width=16 height=16 border=0></b>
 					</td>
 					<td colspan=1 align="center">
 						<b>Thread</b>
@@ -365,9 +365,9 @@ if ($action == 'show_board') {
 						<div class="HNCContainer" >
 							<img src="';
             if ((int)$thread['replies'] >= 2)
-                $main_content .= $layout_name . '/images/global/forum/logo_hot.gif"';
+                $main_content .= $layout_name . '/assets/img/forum/logo_hot.gif"';
             else
-                $main_content .= $layout_name . '/images/global/general/blank.gif"';
+                $main_content .= $layout_name . '/assets/img/general/blank.gif"';
             $main_content .= '
 							 width=22 height=22 border=0/>
 						</div>
@@ -375,7 +375,7 @@ if ($action == 'show_board') {
 					<td colspan=1 align="center" >';
             if ($thread['icon_id'] >= 1)
                 $main_content .= '
-						<img src="' . $layout_name . '/images/global/forum/icons/' . $thread['icon_id'] . '.gif" border=0 width=15 height=15 alt="Eek">';
+						<img src="' . $layout_name . '/assets/img/forum/icons/' . $thread['icon_id'] . '.gif" border=0 width=15 height=15 alt="Eek">';
             $main_content .= '
 					</td>
 					<td colspan=1 align="left">';
@@ -427,15 +427,15 @@ if ($action == 'show_board') {
         $main_content .= $make_table_header("Table5");
         $main_content .= '
 			<tr>
-				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/images/global/forum/logo_new.gif" border=0 width=22 height=22></td>
+				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/assets/img/forum/logo_new.gif" border=0 width=22 height=22></td>
 				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><b>New Posts</b></td>
-				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/images/global/general/blank.gif" width=12 height=1 border=0></td>
-				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/images/global/forum/logo_hot.gif" border=0 width=22 height=22><img src="' . $layout_name . '/images/global/forum/logo_hotnew.gif" border=0 width=22 height=22></td>
+				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/assets/img/general/blank.gif" width=12 height=1 border=0></td>
+				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/assets/img/forum/logo_hot.gif" border=0 width=22 height=22><img src="' . $layout_name . '/assets/img/forum/logo_hotnew.gif" border=0 width=22 height=22></td>
 				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><b>More Than 16 Replies</b></td>
-				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/images/global/general/blank.gif" width=12 height=1 border=0></td>
-				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/images/global/forum/logo_closed.gif" border=0 width=22 height=22></td>
+				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/assets/img/general/blank.gif" width=12 height=1 border=0></td>
+				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/assets/img/forum/logo_closed.gif" border=0 width=22 height=22></td>
 				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><b>Closed Thread</b></td>
-				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/images/global/forum/logo_sticky.gif" border=0 width=22 height=22></td>
+				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><img src="' . $layout_name . '/assets/img/forum/logo_sticky.gif" border=0 width=22 height=22></td>
 				<td  class="ff_info" colspan=1 align="center" valign="middle" NOWRAP ><b>Sticky Thread</b></td>
 			</tr>
 		';
@@ -538,12 +538,12 @@ if ($action == 'show_thread') {
         $main_content .= $make_table_header("Table5", "right");
         $main_content .= '
 				<TR>
-					<TD><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
+					<TD><IMG SRC="' . $layout_name . '/assets/img/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
 					<TD WIDTH=100% ALIGN=right>
 						<a href="?subtopic=forum" >Community Boards</a> | 
 						<a href="?subtopic=forum&action=show_board&id=' . $threads[0]['section'] . '">' . $sections[$threads[0]['section']] . '</a> | <b style="word-break: break-all;">' . htmlspecialchars($thread_name['post_topic']) . '</b>
 					</TD>
-					<TD><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
+					<TD><IMG SRC="' . $layout_name . '/assets/img/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
 				</TR>
 			';
         $main_content .= $make_table_footer();
@@ -577,16 +577,16 @@ if ($action == 'show_thread') {
                 $main_content .= '
 						<div class="CipBorderTop" >
 							<div class="CipBorder" >
-								<div class="CipBorderCornerL" style="background-image: url(' . $layout_name . '/images/global/forum/cip_post_border_lu.jpg)" ></div>
-								<div class="CipBorderH" style="background-image: url(' . $layout_name . '/images/global/forum/cip_post_border_h.jpg)" ></div>
-								<div class="CipBorderCornerR" style="background-image: url(' . $layout_name . '/images/global/forum/cip_post_border_ru.jpg)" ></div>
+								<div class="CipBorderCornerL" style="background-image: url(' . $layout_name . '/assets/img/forum/cip_post_border_lu.jpg)" ></div>
+								<div class="CipBorderH" style="background-image: url(' . $layout_name . '/assets/img/forum/cip_post_border_h.jpg)" ></div>
+								<div class="CipBorderCornerR" style="background-image: url(' . $layout_name . '/assets/img/forum/cip_post_border_ru.jpg)" ></div>
 							</div>
 						</div>
 						<div class="CipBorderLeft" >
-							<div class="CipBorderV" style="background-image: url(' . $layout_name . '/images/global/forum/cip_post_border_v.jpg)" ></div>
+							<div class="CipBorderV" style="background-image: url(' . $layout_name . '/assets/img/forum/cip_post_border_v.jpg)" ></div>
 						</div>
 						<div class="CipBorderRight" >
-							<div class="CipBorderV" style="background-image: url(' . $layout_name . '/images/global/forum/cip_post_border_v.jpg)" ></div>
+							<div class="CipBorderV" style="background-image: url(' . $layout_name . '/assets/img/forum/cip_post_border_v.jpg)" ></div>
 						</div>';
             $main_content .= '
 						<div class="PostSeparatorV" ></div>
@@ -597,7 +597,7 @@ if ($action == 'show_thread') {
             $p->loadByName($thread['name']);
             
             if ($thread['group_id'] >= 3) {
-                $main_content .= '<img class="CipPostIcon" src="' . $layout_name . '/images/global/forum/cip_post_icon.gif" /><br>';
+                $main_content .= '<img class="CipPostIcon" src="' . $layout_name . '/assets/img/forum/cip_post_icon.gif" /><br>';
                 $main_content .= '<font class="ff_smallinfo">Community Manager<br/>';
             } else {
                 $main_content .= $p->makeOutfitUrl();
@@ -622,7 +622,7 @@ if ($action == 'show_thread') {
 				<div class="PostText" >';
             if ($thread['icon_id'] != 0)
                 $main_content .= '
-					<img src="' . $layout_name . '/images/global/forum/icons/' . $thread['icon_id'] . '.gif">
+					<img src="' . $layout_name . '/assets/img/forum/icons/' . $thread['icon_id'] . '.gif">
 				';
             $main_content .= '
 				' . showPost(htmlspecialchars($thread['post_topic']), $thread['post_text'], $thread['post_smile']);
@@ -638,7 +638,7 @@ if ($action == 'show_thread') {
 				</div>
 				<div class="PostLower" >
 					<div class="PostDetailsHelper" >
-						<div class="PostDetails" ><img src="' . $layout_name . '/images/global/forum/logo_oldpost.gif" border=0 width=14 height=11>' . date('d.m.y H:i:s', $thread['post_date']);
+						<div class="PostDetails" ><img src="' . $layout_name . '/assets/img/forum/logo_oldpost.gif" border=0 width=14 height=11>' . date('d.m.y H:i:s', $thread['post_date']);
             
             if ($thread['edit_date'] > 0) {
                 if ($thread['last_edit_aid'] != $thread['author_aid'])
@@ -680,9 +680,9 @@ if ($action == 'show_thread') {
                 $main_content .= '
 				<div class="CipBorderBottom">
 				<div class="CipBorder">
-					<div class="CipBorderCornerL" style="background-image: url(' . $layout_name . '/images/global/forum/cip_post_border_ll.jpg)" ></div>
-					<div class="CipBorderH" style="background-image: url(' . $layout_name . '/images/global/forum/cip_post_border_h.jpg)" ></div>
-					<div class="CipBorderCornerR" style="background-image: url(' . $layout_name . '/images/global/forum/cip_post_border_rl.jpg)" ></div>
+					<div class="CipBorderCornerL" style="background-image: url(' . $layout_name . '/assets/img/forum/cip_post_border_ll.jpg)" ></div>
+					<div class="CipBorderH" style="background-image: url(' . $layout_name . '/assets/img/forum/cip_post_border_h.jpg)" ></div>
+					<div class="CipBorderCornerR" style="background-image: url(' . $layout_name . '/assets/img/forum/cip_post_border_rl.jpg)" ></div>
 				</div>
 			</div>';
             else
@@ -764,13 +764,13 @@ if ($action == 'new_post') {
             $main_content .= $make_table_header("Table5", "right");
             $main_content .= '
 					<TR>
-						<TD><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
+						<TD><IMG SRC="' . $layout_name . '/assets/img/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
 						<TD WIDTH=100% ALIGN=right>
 							<a href="?subtopic=forum" >Community Boards</a> | 
 							<a href="?subtopic=forum&action=show_board&id=' . $thread['section'] . '">' . $sections[$thread['section']] . '</a> |
 							<a href="?subtopic=forum&action=show_thread&id=' . $thread_id . '">' . htmlspecialchars($thread['post_topic']) . '</a> |
 							<b>Post New Reply</b></TD>
-						<TD><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
+						<TD><IMG SRC="' . $layout_name . '/assets/img/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
 					</TR>
 			';
             $main_content .= $make_table_footer();
@@ -782,7 +782,7 @@ if ($action == 'new_post') {
                 $main_content .= $make_table_header();
                 $main_content .= '
 						<tr>
-							<td style="position:relative; height:100%;background-color:#D4C0A1;" align="top" >
+							<td style="position:relative; height:100%;background-color:4e3623;" align="top" >
 								<div style="position:relative; min-height:18px; width:100%; overflow-x:auto; overflow-y:visible; width:734px; word-wrap:break-word;">
 								' . showPreview(htmlspecialchars($thread['post_topic']), $_POST['text'], $thread['post_smile']) . '
 								</div>
@@ -901,8 +901,8 @@ if ($action == 'new_post') {
 							<input type="hidden" name="save" value="save" />';
                     $main_content .= '
 								<tr>
-									<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" valign="top" ><b>' . $config['server']['serverName'] . ' Character:</b></td>
-									<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" >
+									<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" valign="top" ><b>' . $config['server']['serverName'] . ' Character:</b></td>
+									<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" >
 										<select name="char_id">
 											<option value="0">(Choose character)</option>';
                     foreach ($players_from_account as $player) {
@@ -917,110 +917,110 @@ if ($action == 'new_post') {
 								</tr>';
                     $main_content .= '
 								<tr>
-									<td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" valign="top" ><b>Post Subject:</b></td>
-									<td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" >
+									<td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" valign="top" ><b>Post Subject:</b></td>
+									<td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" >
 										<input type="text" name="topic" value="' . htmlspecialchars($post_topic) . '" size="40" maxlength="60" />
 										<font class="ff_info"> (Optional)</font>
 									</td>
 								</tr>';
                     $main_content .= '
 								<tr>
-									<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" valign="top" ><b>Post Icon:</b></td>
-									<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" >
+									<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" valign="top" ><b>Post Icon:</b></td>
+									<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" >
 										<input type=radio name="forum_iconid" value="11">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/11.gif" border=0 width=15 height=15 alt="Stuck Tongue Out">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/11.gif" border=0 width=15 height=15 alt="Stuck Tongue Out">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="12">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/12.gif" border=0 width=15 height=15 alt="Eek">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/12.gif" border=0 width=15 height=15 alt="Eek">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="13">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/13.gif" border=0 width=15 height=15 alt="Roll Eyes">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/13.gif" border=0 width=15 height=15 alt="Roll Eyes">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="14">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/14.gif" border=0 width=15 height=15 alt="Thumbs up">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/14.gif" border=0 width=15 height=15 alt="Thumbs up">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="15">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/15.gif" border=0 width=15 height=15 alt="Thumbs down">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/15.gif" border=0 width=15 height=15 alt="Thumbs down">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="16">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/16.gif" border=0 width=15 height=15 alt="Wink">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/16.gif" border=0 width=15 height=15 alt="Wink">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="17">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/17.gif" border=0 width=15 height=15 alt="Red face">&nbsp;&nbsp;&nbsp;<br>
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/17.gif" border=0 width=15 height=15 alt="Red face">&nbsp;&nbsp;&nbsp;<br>
 										<input type=radio name="forum_iconid" value="18">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/18.gif" border=0 width=15 height=15 alt="Talking">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/18.gif" border=0 width=15 height=15 alt="Talking">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="19">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/19.gif" border=0 width=15 height=15 alt="Unhappy">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/19.gif" border=0 width=15 height=15 alt="Unhappy">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="20">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/20.gif" border=0 width=15 height=15 alt="Angry">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/20.gif" border=0 width=15 height=15 alt="Angry">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="21">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/21.gif" border=0 width=15 height=15 alt="Smile">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/21.gif" border=0 width=15 height=15 alt="Smile">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="22">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/22.gif" border=0 width=15 height=15 alt="Cool">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/22.gif" border=0 width=15 height=15 alt="Cool">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="23">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/23.gif" border=0 width=15 height=15 alt="Question">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/23.gif" border=0 width=15 height=15 alt="Question">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="24">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/24.gif" border=0 width=15 height=15 alt="Exclamation">&nbsp;&nbsp;&nbsp;<br>
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/24.gif" border=0 width=15 height=15 alt="Exclamation">&nbsp;&nbsp;&nbsp;<br>
 										<input type=radio name="forum_iconid" value="25">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/25.gif" border=0 width=15 height=15 alt="Lightbulb">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/25.gif" border=0 width=15 height=15 alt="Lightbulb">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="26">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/26.gif" border=0 width=15 height=15 alt="Arrow">&nbsp;&nbsp;&nbsp;
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/26.gif" border=0 width=15 height=15 alt="Arrow">&nbsp;&nbsp;&nbsp;
 										<input type=radio name="forum_iconid" value="27">
-										&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/27.gif" border=0 width=15 height=15 alt="Post">&nbsp;&nbsp;&nbsp;<br>
+										&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/27.gif" border=0 width=15 height=15 alt="Post">&nbsp;&nbsp;&nbsp;<br>
 										<input type=radio name="forum_iconid" value="0" checked>
 										&nbsp;No Icon</td>
 								</tr>';
                     $main_content .= '
                     			<tr>
-									<td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" valign="top" ><b>Message:</b><br>
+									<td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" valign="top" ><b>Message:</b><br>
 										<br>
 										<font class="ff_info">Replace codes are allowed.<br><br>
 										How to use smileys:<br>
 										<table border=0 cellpadding=2 cellspacing=0 width=100%>
 											<tr>
-												<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/1.gif" border=0 width=15 height=15 alt="Stuck Tongue Out"></td>
+												<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/1.gif" border=0 width=15 height=15 alt="Stuck Tongue Out"></td>
 												<td  colspan=1 align="left" >:p</td>
 											</tr>
 											<tr>
-												<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/2.gif" border=0 width=15 height=15 alt="Eek"></td>
+												<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/2.gif" border=0 width=15 height=15 alt="Eek"></td>
 												<td  colspan=1 align="left" >:eek:</td>
 											</tr>
 											<tr>
-												<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/3.gif" border=0 width=15 height=15 alt="Roll Eyes"></td>
+												<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/3.gif" border=0 width=15 height=15 alt="Roll Eyes"></td>
 												<td  colspan=1 align="left" >:rolleyes:</td>
 											</tr>
 											<tr>
-												<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/4.gif" border=0 width=15 height=15 alt="Wink"></td>
+												<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/4.gif" border=0 width=15 height=15 alt="Wink"></td>
 												<td  colspan=1 align="left" >;)</td>
 											</tr>
 											<tr>
-												<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/5.gif" border=0 width=15 height=15 alt="Red face"></td>
+												<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/5.gif" border=0 width=15 height=15 alt="Red face"></td>
 												<td  colspan=1 align="left" >:o</td>
 											</tr>
 											<tr>
-												<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/6.gif" border=0 width=15 height=15 alt="Talking"></td>
+												<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/6.gif" border=0 width=15 height=15 alt="Talking"></td>
 												<td  colspan=1 align="left" >:D</td>
 											</tr>
 											<tr>
-												<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/7.gif" border=0 width=15 height=15 alt="Unhappy"></td>
+												<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/7.gif" border=0 width=15 height=15 alt="Unhappy"></td>
 												<td  colspan=1 align="left" >:(</td>
 											</tr>
 											<tr>
-												<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/8.gif" border=0 width=15 height=15 alt="Angry"></td>
+												<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/8.gif" border=0 width=15 height=15 alt="Angry"></td>
 												<td  colspan=1 align="left" >:mad:</td>
 											</tr>
 											<tr>
 
-												<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/9.gif" border=0 width=15 height=15 alt="Smile"></td>
+												<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/9.gif" border=0 width=15 height=15 alt="Smile"></td>
 												<td  colspan=1 align="left" >:)</td>
 											</tr>
 											<tr>
-												<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/10.gif" border=0 width=15 height=15 alt="Cool"></td>
+												<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/10.gif" border=0 width=15 height=15 alt="Cool"></td>
 												<td  colspan=1 align="left" >:cool:</td>
 											</tr>
 										</table>
 										</font>
 									</td>
-									<td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" ><textarea rows=20 cols=55 name="text">' . htmlspecialchars($text) . '</textarea></td>
+									<td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" ><textarea rows=20 cols=55 name="text">' . htmlspecialchars($text) . '</textarea></td>
 								</tr>';
                     $main_content .= '
                     			<tr>
-									<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" valign="top" ><b>Options:</td>
-									<td  bgcolor="#D4C0A1" class="ff_info" colspan=1 align="left" ><input type="checkbox" name="smile" value="1"';
+									<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" valign="top" ><b>Options:</td>
+									<td  bgcolor="4e3623" class="ff_info" colspan=1 align="left" ><input type="checkbox" name="smile" value="1"';
                     if ($smile == 1)
                         $main_content .= ' checked="checked"';
                     $main_content .= '/>&nbsp;<b>Disable Smileys in This Post </b><br>
@@ -1087,14 +1087,14 @@ if ($action == 'edit_post') {
                 $main_content .= $make_table_header("Table5", "right");
                 $main_content .= '
 					<TR>
-						<TD><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
+						<TD><IMG SRC="' . $layout_name . '/assets/img/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
 						<TD WIDTH=100% ALIGN=right>
 							<a href="?subtopic=forum" >Community Boards</a> | 
 							<a href="?subtopic=forum&action=show_board&id=' . $thread['section'] . '">' . $sections[$thread['section']] . '</a> |
 							<a href="?subtopic=forum&action=show_thread&id=' . $thread['first_post'] . '">' . htmlspecialchars($first_post['post_topic']) . '</a> |
 							<b><a href="http://forum.tibia.com/forum/?action=thread&amp;postid=35335511#post35335511" >Post</a></b> | 
 							<b>Edit Post</b></TD>
-						<TD><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
+						<TD><IMG SRC="' . $layout_name . '/assets/img/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
 					</TR>';
                 $main_content .= $make_table_footer();
                 $main_content .= '<br/><br/><br/>';
@@ -1106,7 +1106,7 @@ if ($action == 'edit_post') {
                     $main_content .= $make_table_header();
                     $main_content .= '
 						<tr>
-							<td style="position:relative; height:100%;background-color:#D4C0A1;" align="top" >
+							<td style="position:relative; height:100%;background-color:4e3623;" align="top" >
 								<div style="position:relative; min-height:18px; width:100%; overflow-x:auto; overflow-y:visible; width:734px; word-wrap:break-word;">
 								' . showPreview(htmlspecialchars($thread['post_topic']), $_POST['text'], $thread['post_smile']) . '
 								</div>
@@ -1190,10 +1190,10 @@ if ($action == 'edit_post') {
 								<input type="hidden" name="subtopic" value="forum" />
 								<input type="hidden" name="save" value="save" />
 								<tr>
-									<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" valign="top" ><b>' . $config['server']['serverName'] . ' Character:</b><br>
+									<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" valign="top" ><b>' . $config['server']['serverName'] . ' Character:</b><br>
 										<font class="ff_smallinfo">(This will appear as "Edited by ..." in the post)</font>
 									</td>
-									<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" >
+									<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" >
 										<select name="char_id">
 											<option value="0">(Choose character)</option>';
                         foreach ($players_from_account as $player) {
@@ -1207,102 +1207,102 @@ if ($action == 'edit_post') {
 							</td>
 						</tr>
 						<tr>
-							<td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" valign="top" ><b>Post Subject:</b></td>
-							<td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" ><input type="text" value="' . htmlspecialchars($post_topic) . '" name="topic" size="40" maxlength="60" /><font class="ff_info"> (Optional)</font></td>
+							<td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" valign="top" ><b>Post Subject:</b></td>
+							<td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" ><input type="text" value="' . htmlspecialchars($post_topic) . '" name="topic" size="40" maxlength="60" /><font class="ff_info"> (Optional)</font></td>
 						</tr>
 						<tr>
-							<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" valign="top" ><b>Post Icon:</b></td>
-							<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" ><input type=radio name="forum_iconid" value="11">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/11.gif" border=0 width=15 height=15 alt="Stuck Tongue Out">&nbsp;&nbsp;&nbsp;
+							<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" valign="top" ><b>Post Icon:</b></td>
+							<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" ><input type=radio name="forum_iconid" value="11">
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/11.gif" border=0 width=15 height=15 alt="Stuck Tongue Out">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="12">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/12.gif" border=0 width=15 height=15 alt="Eek">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/12.gif" border=0 width=15 height=15 alt="Eek">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="13">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/13.gif" border=0 width=15 height=15 alt="Roll Eyes">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/13.gif" border=0 width=15 height=15 alt="Roll Eyes">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="14">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/14.gif" border=0 width=15 height=15 alt="Thumbs up">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/14.gif" border=0 width=15 height=15 alt="Thumbs up">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="15">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/15.gif" border=0 width=15 height=15 alt="Thumbs down">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/15.gif" border=0 width=15 height=15 alt="Thumbs down">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="16">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/16.gif" border=0 width=15 height=15 alt="Wink">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/16.gif" border=0 width=15 height=15 alt="Wink">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="17">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/17.gif" border=0 width=15 height=15 alt="Red face">&nbsp;&nbsp;&nbsp;<br>
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/17.gif" border=0 width=15 height=15 alt="Red face">&nbsp;&nbsp;&nbsp;<br>
 								<input type=radio name="forum_iconid" value="18">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/18.gif" border=0 width=15 height=15 alt="Talking">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/18.gif" border=0 width=15 height=15 alt="Talking">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="19">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/19.gif" border=0 width=15 height=15 alt="Unhappy">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/19.gif" border=0 width=15 height=15 alt="Unhappy">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="20">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/20.gif" border=0 width=15 height=15 alt="Angry">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/20.gif" border=0 width=15 height=15 alt="Angry">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="21">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/21.gif" border=0 width=15 height=15 alt="Smile">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/21.gif" border=0 width=15 height=15 alt="Smile">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="22">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/22.gif" border=0 width=15 height=15 alt="Cool">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/22.gif" border=0 width=15 height=15 alt="Cool">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="23">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/23.gif" border=0 width=15 height=15 alt="Question">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/23.gif" border=0 width=15 height=15 alt="Question">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="24">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/24.gif" border=0 width=15 height=15 alt="Exclamation">&nbsp;&nbsp;&nbsp;<br>
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/24.gif" border=0 width=15 height=15 alt="Exclamation">&nbsp;&nbsp;&nbsp;<br>
 								<input type=radio name="forum_iconid" value="25">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/25.gif" border=0 width=15 height=15 alt="Lightbulb">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/25.gif" border=0 width=15 height=15 alt="Lightbulb">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="26">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/26.gif" border=0 width=15 height=15 alt="Arrow">&nbsp;&nbsp;&nbsp;
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/26.gif" border=0 width=15 height=15 alt="Arrow">&nbsp;&nbsp;&nbsp;
 								<input type=radio name="forum_iconid" value="27">
-								&nbsp;<img src="' . $layout_name . '/images/global/forum/icons/27.gif" border=0 width=15 height=15 alt="Post">&nbsp;&nbsp;&nbsp;<br>
+								&nbsp;<img src="' . $layout_name . '/assets/img/forum/icons/27.gif" border=0 width=15 height=15 alt="Post">&nbsp;&nbsp;&nbsp;<br>
 								<input type=radio name="forum_iconid" value="0" checked>
 								&nbsp;No Icon</td>
 						</tr>
                         <tr>
-							<td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" valign="top" ><b>Message:</b><br>
+							<td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" valign="top" ><b>Message:</b><br>
 							<br>
 							<font class="ff_info">Replace codes are allowed.<br><br>
 							How to use smileys:<br>
 							<table border=0 cellpadding=2 cellspacing=0 width=100%>
 							<tr>
-								<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/1.gif" border=0 width=15 height=15 alt="Stuck Tongue Out"></td>
+								<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/1.gif" border=0 width=15 height=15 alt="Stuck Tongue Out"></td>
 								<td  colspan=1 align="left" >:p</td>
 							</tr>
 							<tr>
-							<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/2.gif" border=0 width=15 height=15 alt="Eek"></td>
+							<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/2.gif" border=0 width=15 height=15 alt="Eek"></td>
 							<td  colspan=1 align="left" >:eek:</td>
 							</tr>
 							<tr>
-								<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/3.gif" border=0 width=15 height=15 alt="Roll Eyes"></td>
+								<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/3.gif" border=0 width=15 height=15 alt="Roll Eyes"></td>
 								<td  colspan=1 align="left" >:rolleyes:</td>
 							</tr>
 							<tr>
-								<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/4.gif" border=0 width=15 height=15 alt="Wink"></td>
+								<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/4.gif" border=0 width=15 height=15 alt="Wink"></td>
 								<td  colspan=1 align="left" >;)</td>
 							</tr>
 							<tr>
-								<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/5.gif" border=0 width=15 height=15 alt="Red face"></td>
+								<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/5.gif" border=0 width=15 height=15 alt="Red face"></td>
 								<td  colspan=1 align="left" >:o</td>
 							</tr>
 							<tr>
-								<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/6.gif" border=0 width=15 height=15 alt="Talking"></td>
+								<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/6.gif" border=0 width=15 height=15 alt="Talking"></td>
 								<td  colspan=1 align="left" >:D</td>
 							</tr>
 							<tr>
-								<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/7.gif" border=0 width=15 height=15 alt="Unhappy"></td>
+								<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/7.gif" border=0 width=15 height=15 alt="Unhappy"></td>
 								<td  colspan=1 align="left" >:(</td>
 							</tr>
 							<tr>
-								<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/8.gif" border=0 width=15 height=15 alt="Angry"></td>
+								<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/8.gif" border=0 width=15 height=15 alt="Angry"></td>
 								<td  colspan=1 align="left" >:mad:</td>
 							</tr>
 							<tr>
-								<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/9.gif" border=0 width=15 height=15 alt="Smile"></td>
+								<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/9.gif" border=0 width=15 height=15 alt="Smile"></td>
 								<td  colspan=1 align="left" >:)</td>
 							</tr>
 							<tr>
-								<td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/10.gif" border=0 width=15 height=15 alt="Cool"></td>
+								<td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/10.gif" border=0 width=15 height=15 alt="Cool"></td>
 								<td  colspan=1 align="left" >:cool:</td>
 							</tr>
 						</table>
 					</font>
 					</td>
-					<td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" ><textarea rows=20 cols=55 name="text">' . htmlspecialchars($text) . '</textarea><div id="forum_pt_lenght">4094 characters left.</div></td>
+					<td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" ><textarea rows=20 cols=55 name="text">' . htmlspecialchars($text) . '</textarea><div id="forum_pt_lenght">4094 characters left.</div></td>
 						</tr>
                         <tr>
-							<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" valign="top" ><b>Options:</td>
-							<td  bgcolor="#D4C0A1" class="ff_info" colspan=1 align="left" ><input type="checkbox" name="smile" value="1"';
+							<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" valign="top" ><b>Options:</td>
+							<td  bgcolor="4e3623" class="ff_info" colspan=1 align="left" ><input type="checkbox" name="smile" value="1"';
                         if ($smile == 1)
                             $main_content .= ' checked="checked"';
                         $main_content .= '/><strong>Disable Smileys in This Post</strong> </td>
@@ -1343,12 +1343,12 @@ if ($action == 'new_topic') {
             $main_content .= $make_table_header("Table5", "right");
             $main_content .= '
 					<TR>
-						<TD><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
+						<TD><IMG SRC="' . $layout_name . '/assets/img/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
 						<TD WIDTH=100% ALIGN=right>
 							<a href="?subtopic=forum" >Community Boards</a> | 
 							<a href="?subtopic=forum&action=show_board&id=' . $section_id . '">' . $sections[$section_id] . '</a> |
 							<b>Post New Thread</b></TD>
-						<TD><IMG SRC="' . $layout_name . '/images/global/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
+						<TD><IMG SRC="' . $layout_name . '/assets/img/general/blank.gif" WIDTH=10 HEIGHT=1 BORDER=0></TD>
 					</TR>';
             $main_content .= $make_table_footer();
             $main_content .= '<br/><br/><br/>';
@@ -1360,7 +1360,7 @@ if ($action == 'new_topic') {
                 $main_content .= $make_table_header();
                 $main_content .= '
 						<tr>
-							<td style="position:relative; height:100%;background-color:#D4C0A1;" align="top" >
+							<td style="position:relative; height:100%;background-color:4e3623;" align="top" >
 								<div style="position:relative; min-height:18px; width:100%; overflow-x:auto; overflow-y:visible; width:734px; word-wrap:break-word;">
 								' . showPreview(htmlspecialchars($thread['post_topic']), $_POST['text'], $thread['post_smile']) . '
 								</div>
@@ -1486,8 +1486,8 @@ if ($action == 'new_topic') {
 							<input type="hidden" name="save" value="save" />';
                     $main_content .= '
                             <tr>
-								<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" valign="top" ><b>' . $config['server']['serverName'] . ' Character:</b></td>
-								<td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" >
+								<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" valign="top" ><b>' . $config['server']['serverName'] . ' Character:</b></td>
+								<td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" >
 									<select name="char_id">
 										<option value="0">(Choose character)</option>';
                     foreach ($players_from_account as $player) {
@@ -1502,59 +1502,18 @@ if ($action == 'new_topic') {
                             </tr>';
                     $main_content .= '
                             <tr>
-                                <td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" valign="top" ><b>Thread Subject:</b></td>
-                                <td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" >
+                                <td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" valign="top" ><b>Thread Subject:</b></td>
+                                <td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" >
                                     <input type="text" name="topic" value="' . htmlspecialchars($post_topic) . '" size="40" maxlength="60" />
                                 </td>
                             </tr>';
                     
-                    $main_content .= '
-                            <tr>
-                                <td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" valign="top" ><b>Thread Icon:</b></td>
-                                <td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" >
-                                    <input type=radio name="forum_iconid" value="11">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/11.gif" border=0 width=15 height=15 alt="Stuck Tongue Out">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="12">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/12.gif" border=0 width=15 height=15 alt="Eek">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="13">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/13.gif" border=0 width=15 height=15 alt="Roll Eyes">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="14">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/14.gif" border=0 width=15 height=15 alt="Thumbs up">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="15">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/15.gif" border=0 width=15 height=15 alt="Thumbs down">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="16">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/16.gif" border=0 width=15 height=15 alt="Wink">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="17">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/17.gif" border=0 width=15 height=15 alt="Red face">&nbsp;&nbsp;&nbsp;<br>
-                                    <input type=radio name="forum_iconid" value="18">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/18.gif" border=0 width=15 height=15 alt="Talking">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="19">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/19.gif" border=0 width=15 height=15 alt="Unhappy">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="20">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/20.gif" border=0 width=15 height=15 alt="Angry">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="21">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/21.gif" border=0 width=15 height=15 alt="Smile">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="22">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/22.gif" border=0 width=15 height=15 alt="Cool">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="23">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/23.gif" border=0 width=15 height=15 alt="Question">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="24">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/24.gif" border=0 width=15 height=15 alt="Exclamation">&nbsp;&nbsp;&nbsp;<br>
-                                    <input type=radio name="forum_iconid" value="25">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/25.gif" border=0 width=15 height=15 alt="Lightbulb">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="26">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/26.gif" border=0 width=15 height=15 alt="Arrow">&nbsp;&nbsp;&nbsp;
-                                    <input type=radio name="forum_iconid" value="27">
-                                    &nbsp;<img src="' . $layout_name . '/images/global/forum/icons/27.gif" border=0 width=15 height=15 alt="Post">&nbsp;&nbsp;&nbsp;<br>
-                                    <input type=radio name="forum_iconid" value="0" checked>
-                                    &nbsp;No Icon</td>
-                            </tr>';
                     
                     if ($section_id == 1 && $group_id_of_acc_logged >= $group_not_blocked)
                         $main_content .= '
                             <tr>
-                                <td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" valign="top" ><b>News Icon:</b></td>
-                                <td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" >
+                                <td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" valign="top" ><b>News Icon:</b></td>
+                                <td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" >
                                     <select name="news_icon">
                                         <option value="newsicon_community_big">Community</option>
                                         <option value="newsicon_development_big">Development</option>
@@ -1564,7 +1523,7 @@ if ($action == 'new_topic') {
                             </tr>';
                     $main_content .= '
                             <tr>
-                                <td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" valign="top" >
+                                <td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" valign="top" >
                                     <b>Message:</b><br>
                                     <br>
                                     <font class="ff_info">
@@ -1572,54 +1531,54 @@ if ($action == 'new_topic') {
                                         How to use smileys:<br>
                                         <table border=0 cellpadding=2 cellspacing=0 width=100%>
                                             <tr>
-                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/1.gif" border=0 width=15 height=15 alt="Stuck Tongue Out"></td>
+                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/1.gif" border=0 width=15 height=15 alt="Stuck Tongue Out"></td>
                                                 <td  colspan=1 align="left" >:p</td>
                                             </tr>
                                             <tr>
-                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/2.gif" border=0 width=15 height=15 alt="Eek"></td>
+                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/2.gif" border=0 width=15 height=15 alt="Eek"></td>
                                                 <td  colspan=1 align="left" >:eek:</td>
                                             </tr>
                                             <tr>
-                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/3.gif" border=0 width=15 height=15 alt="Roll Eyes"></td>
+                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/3.gif" border=0 width=15 height=15 alt="Roll Eyes"></td>
                                                 <td  colspan=1 align="left" >:rolleyes:</td>
                                             </tr>
                                             <tr>
-                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/4.gif" border=0 width=15 height=15 alt="Wink"></td>
+                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/4.gif" border=0 width=15 height=15 alt="Wink"></td>
                                                 <td  colspan=1 align="left" >;)</td>
                                             </tr>
                                             <tr>
-                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/5.gif" border=0 width=15 height=15 alt="Red face"></td>
+                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/5.gif" border=0 width=15 height=15 alt="Red face"></td>
                                                 <td  colspan=1 align="left" >:o</td>
                                             </tr>
                                             <tr>
-                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/6.gif" border=0 width=15 height=15 alt="Talking"></td>
+                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/6.gif" border=0 width=15 height=15 alt="Talking"></td>
                                                 <td  colspan=1 align="left" >:D</td>
                                             </tr>
                                             <tr>
-                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/7.gif" border=0 width=15 height=15 alt="Unhappy"></td>
+                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/7.gif" border=0 width=15 height=15 alt="Unhappy"></td>
                                                 <td  colspan=1 align="left" >:(</td>
                                             </tr>
                                             <tr>
-                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/8.gif" border=0 width=15 height=15 alt="Angry"></td>
+                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/8.gif" border=0 width=15 height=15 alt="Angry"></td>
                                                 <td  colspan=1 align="left" >:mad:</td>
                                             </tr>
                                             <tr>
-                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/9.gif" border=0 width=15 height=15 alt="Smile"></td>
+                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/9.gif" border=0 width=15 height=15 alt="Smile"></td>
                                                 <td  colspan=1 align="left" >:)</td>
                                             </tr>
                                             <tr>
-                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/images/global/forum/smile/10.gif" border=0 width=15 height=15 alt="Cool"></td>
+                                                <td  colspan=1 align="left" ><img src="' . $layout_name . '/assets/img/forum/smile/10.gif" border=0 width=15 height=15 alt="Cool"></td>
                                                 <td  colspan=1 align="left" >:cool:</td>
                                             </tr>
                                         </table>
                                     </font>
                                 </td>
-                                <td  bgcolor="#F1E0C6" class="ff_std" colspan=1 align="left" ><textarea rows=20 cols=55 name="text">' . htmlspecialchars($text) . '</textarea><br /></td>
+                                <td  bgcolor="#291b1c" class="ff_std" colspan=1 align="left" ><textarea rows=20 cols=55 name="text">' . htmlspecialchars($text) . '</textarea><br /></td>
                             </tr>';
                     $main_content .= '
                             <tr>
-                                <td  bgcolor="#D4C0A1" class="ff_std" colspan=1 align="left" valign="top" ><b>Options:</td>
-                                <td  bgcolor="#D4C0A1" class="ff_info" colspan=1 align="left" ><input type="checkbox" name="smile" value="1"';
+                                <td  bgcolor="4e3623" class="ff_std" colspan=1 align="left" valign="top" ><b>Options:</td>
+                                <td  bgcolor="4e3623" class="ff_info" colspan=1 align="left" ><input type="checkbox" name="smile" value="1"';
                     if ($smile == 1) {
                         $main_content .= ' checked="checked"';
                     }

@@ -487,11 +487,6 @@ $account_players = $account_logged->getPlayersList();
 //show list of players on account
 $var = 0;
 
-$main_content .= ' 
-
-				';
-
-
 foreach ($account_players as $account_player) {
 
 	

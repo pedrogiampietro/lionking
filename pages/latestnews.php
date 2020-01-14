@@ -267,7 +267,7 @@ if (isset($last_threads[0])) {
     <div class="news-content">
         <a href="#">
             <div class="news-photo">
-                <img src="#"> 
+                <!--<img src="#">-->
             </div> 
         </a>
         <div class="news-info"> 

@@ -41,16 +41,48 @@ if (!defined('INITIALIZED'))
         <?php if ($subtopic == 'adminpanel') { ?>
             <script src="<?php echo $layout_name; ?>/assets/js/ajaxmonteiro.js<?php echo $css_version; ?>"></script>
         <?php } ?>
-        <!--Tiny Editor 
-        <script type="text/javascript" src="./vendor/tinymce/tinymce/tinymce.min.js"></script>-->
+        <!-- Tiny Editor -->
+        <script type="text/javascript" src="./vendor/tinymce/tinymce/tinymce.min.js"></script>
         <script src="<?php echo $layout_name; ?>/assets/js/iziToast.min.js<?php echo $css_version; ?>"></script>
         <script async src="<?php echo $layout_name; ?>/assets/js/iziModal.js<?php echo $css_version; ?>"></script>
-
-
 
         <?php
            if ($_REQUEST['subtopic'] == "createaccount") echo '<script src="' . $layout_name . '/assets/js/create_character.js' . $css_version . '"></script>';
         ?>
+
+    <script type="text/javascript">
+        iziToast.settings({
+            icon:'material-icons',
+            titleSize:'10pt',
+            titleColor:'#5A2800',
+            messageSize:'10pt',
+            messageColor:'#5A2800',
+            backgroundColor:'#D4C0A1',
+            progressBarColor:'rgba(90,40,0,.8)',
+            // progressBarColor:'url(./layouts/tibiacom/images/global/content/table-headline-border.gif)',
+            closeOnEscape: true,
+            overlay:true,
+            overlayClose: true,
+        });
+        tinymce.init({
+            selector: "textarea",  // change this value according to your HTML
+            plugins : [
+                "autolink",
+                "link",
+                "image",
+                "lists",
+                "preview"
+                // "textcolor"
+            ],
+            // toolbar: "undo redo | forecolor backcolor",
+            a_plugin_option: false,
+            skin: 'lightgray',
+            themes: "modern",
+            language: "pt_BR",
+            a_configuration_option: 400
+        });
+</script>
+
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <base href="/">
